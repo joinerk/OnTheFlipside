@@ -1,4 +1,12 @@
-Leigh Joiner Trello Board: Proposal: Other docs:
+10-1-2024 3hr: Figuring out levels
+
+Found level tutorials on switching levels
+https://youtu.be/GZrALMvOwY8?si=vB0gHxlb-Kvdw-7O
+https://youtu.be/CJW-aYo71RY?si=wSR4l3p-0i_ZlYuE
+TODO:
+-Set up levels
+-Set up game script
+
 
 10-1-2024 - 2hr: Setting up repo and git push
 
