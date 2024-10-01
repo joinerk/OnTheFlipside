@@ -1,0 +1,9 @@
+[core]
+	bare = false
+	repositoryformatversion = 0
+	filemode = true
+	ignorecase = true
+	logallrefupdates = true
+[remote "Leigh-Joiner-Game"]
+	url = https://github.com/joinerk/Leigh-Joiner-Game.git
+	fetch = +refs/heads/*:refs/remotes/Leigh-Joiner-Game/*
