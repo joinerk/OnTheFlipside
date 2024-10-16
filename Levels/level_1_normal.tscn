@@ -1,6 +1,5 @@
-[gd_scene load_steps=72 format=4 uid="uid://dmsmebg8rrtj0"]
+[gd_scene load_steps=70 format=4 uid="uid://dmsmebg8rrtj0"]
 
-[ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="1_glujx"]
 [ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_ivx8q"]
 [ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="2_0w6d3"]
 [ext_resource type="Texture2D" uid="uid://b8jqy55ge48vo" path="res://Assets/Updated/Tiles/boxAlt.png" id="3_ryfc1"]
@@ -36,9 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://c5sygemk3cki5" path="res://Assets/Updated/Items/buttonRed.png" id="33_38osv"]
 [ext_resource type="Texture2D" uid="uid://dsrjbjiyli2hp" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="34_lk51w"]
 [ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="35_is7eo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ye6pa"]
-size = Vector2(31, 18)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nlev"]
 resource_name = "Box"
@@ -323,18 +319,6 @@ sources/45 = SubResource("TileSetAtlasSource_iljm1")
 
 [node name="Level 1 Normal" type="Node"]
 
-[node name="Player 1" parent="." instance=ExtResource("1_glujx")]
-position = Vector2(-507, 0)
-collision_layer = 6
-
-[node name="Area2D" type="Area2D" parent="Player 1"]
-collision_layer = 4
-collision_mask = 7
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1/Area2D"]
-position = Vector2(-0.5, -7)
-shape = SubResource("RectangleShape2D_ye6pa")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-34, -267)
 rotation = -3.14159
@@ -355,6 +339,3 @@ tile_set = SubResource("TileSet_dj0xp")
 
 [node name="Key Yellow" parent="." instance=ExtResource("35_is7eo")]
 position = Vector2(204, -407)
-
-[connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
