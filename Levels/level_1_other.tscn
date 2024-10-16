@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://ieiwovyggaos"]
+[gd_scene load_steps=71 format=4 uid="uid://ieiwovyggaos"]
 
 [ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_avs7i"]
 [ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="2_3qqm3"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://c5sygemk3cki5" path="res://Assets/Updated/Items/buttonRed.png" id="33_ltjfd"]
 [ext_resource type="Texture2D" uid="uid://dsrjbjiyli2hp" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="34_0tm4j"]
 [ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="35_m2247"]
+[ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_lip3g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0wbd"]
 resource_name = "Box"
@@ -339,3 +340,6 @@ tile_set = SubResource("TileSet_48fux")
 
 [node name="Key Yellow" parent="." instance=ExtResource("35_m2247")]
 position = Vector2(-204, -407)
+
+[node name="Next Level" parent="." instance=ExtResource("36_lip3g")]
+position = Vector2(516, -407)

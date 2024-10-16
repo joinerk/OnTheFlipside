@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bd5ugdew4myl6"]
+
+[ext_resource type="Texture2D" uid="uid://c1a8dx16le863" path="res://Assets/Updated/Tiles/door_closedMid.png" id="1_u8qqe"]
+[ext_resource type="Script" path="res://Scenes/next_level.gd" id="1_w6djw"]
+[ext_resource type="Texture2D" uid="uid://5q3q3lekfvh8" path="res://Assets/Updated/Tiles/door_closedTop.png" id="2_wc3as"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2f60"]
+texture = ExtResource("1_u8qqe")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(68, 68)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xp1n"]
+texture = ExtResource("2_wc3as")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(68, 68)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l4elp"]
+sources/0 = SubResource("TileSetAtlasSource_o2f60")
+sources/1 = SubResource("TileSetAtlasSource_5xp1n")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8r7n"]
+size = Vector2(68, 88)
+
+[node name="Next Level" type="Area2D"]
+script = ExtResource("1_w6djw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-8, -26)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 254, 255, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 251, 255, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_l4elp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(34, -44)
+shape = SubResource("RectangleShape2D_p8r7n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
