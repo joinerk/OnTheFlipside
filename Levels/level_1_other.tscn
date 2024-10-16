@@ -342,4 +342,4 @@ tile_set = SubResource("TileSet_48fux")
 position = Vector2(-204, -407)
 
 [node name="Next Level" parent="." instance=ExtResource("36_lip3g")]
-position = Vector2(516, -407)
+position = Vector2(544, -407)
