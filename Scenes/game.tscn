@@ -330,7 +330,7 @@ sources/45 = SubResource("TileSetAtlasSource_2vs86")
 script = ExtResource("1_vh3ox")
 
 [node name="Player 1" parent="." instance=ExtResource("1_vmans")]
-position = Vector2(-588, 0)
+position = Vector2(-507, 0)
 collision_layer = 6
 
 [node name="Area2D" type="Area2D" parent="Player 1"]
