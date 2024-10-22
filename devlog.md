@@ -3,6 +3,19 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+10-22-2024 - 3.5hr: Added button (unresponsive) and directional movement
+- Added an Area2D for the button, but it is currently unresponsive
+- Added directional movement for player characters
+https://youtu.be/LOhfqjmasi0?si=tFK166MOwC-qzqbB
+https://youtu.be/QIEhUKHHaEk?si=v7g2g-GGaK9UTLwL
+- TODO:
+  - Figure out crate glitching on Other world
+  - Make button pressable
+  - Make button action work (platform appear/disappear)
+- I need to figure out what code I need to make this button pressable (will check Brackey's)
+- Figure out how to make controls flip in Other world
+- Figure out how to make sure the players stay in the last location they left off on
+
 10-16-2024 - 2hr: Button for flip
 - Used some online tutorials to work on the switch level mechanic
 https://www.youtube.com/watch?v=GZrALMvOwY8&list=PLs1JDf36b_gmUI5IfE50bscTeFjqiKMgZ&index=3
