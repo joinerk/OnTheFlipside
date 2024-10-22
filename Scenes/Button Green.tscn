@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://6qydnickxbr3"]
+
+[ext_resource type="Texture2D" uid="uid://ch1rjeq00d5ls" path="res://Assets/Updated/Items/buttonGreen_pressed.png" id="1_r2d58"]
+[ext_resource type="Texture2D" uid="uid://dlv4ss0djhwdr" path="res://Assets/Updated/Items/buttonGreen.png" id="2_0ye7m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8uc5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r2d58")
+}],
+"loop": true,
+"name": &"Pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0ye7m")
+}],
+"loop": true,
+"name": &"Unpressed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8js8l"]
+size = Vector2(42, 41)
+
+[node name="Button Green" type="Area2D"]
+collision_layer = 8
+collision_mask = 12
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -35)
+sprite_frames = SubResource("SpriteFrames_g8uc5")
+animation = &"Unpressed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20.5)
+shape = SubResource("RectangleShape2D_8js8l")
