@@ -3,6 +3,18 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+10-29-2024 - 2hr: Packaging scenes
+- Made scenes switch with TAB key
+- Trying to figure out how to package scenes for levels
+https://youtu.be/FuIn_1aK7rM?si=7PpmXNcU7Hk2VW2A
+https://youtu.be/LWNjK28MMwU?si=hvhZFtVL7eckfjsQ
+- TODO:
+  - Package level scenes
+  - Switch between packed scenes
+  - Keep objects in place
+- Struggling to find tutorials for Godot 4 because it is so new
+
+
 10-29-2024 - 3hr: Fixed Other world crate
 - Fixed crate in other world so players can jump on it
 - Tried to figure out how to make Tab key switch level
@@ -28,6 +40,7 @@ https://youtu.be/QIEhUKHHaEk?si=v7g2g-GGaK9UTLwL
 - Figure out how to make controls flip in Other world
 - Figure out how to make sure the players stay in the last location they left off on
 
+
 10-16-2024 - 2hr: Button for flip
 - Used some online tutorials to work on the switch level mechanic
 https://www.youtube.com/watch?v=GZrALMvOwY8&list=PLs1JDf36b_gmUI5IfE50bscTeFjqiKMgZ&index=3
@@ -39,6 +52,7 @@ https://www.youtube.com/watch?v=w1tWIw511N0
 - I need to figure out how to make the button a key instead of a button on-screen
 - Figure out how to make sure the players stay in the last location they left off on
 
+
 10-1-2024 - 3hr: Anjali assistance
 - Anjali tried helping me push to git
 - Worked on designing the Otherworld level and inputing the second player character
@@ -47,6 +61,7 @@ https://www.youtube.com/watch?v=w1tWIw511N0
   - Button
   - "Trigger"
   - Hide/activate platform
+
 
 9-24-2024 - 3.5hr: Building level 1 + crate kicking
 - Followed Brackey tutorial for coding the Key item

@@ -47,7 +47,7 @@ script = ExtResource("1_ikn28")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -47)
 sprite_frames = SubResource("SpriteFrames_w8057")
-animation = &"Jump"
+animation = &"Stand"
 autoplay = "Stand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

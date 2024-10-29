@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://ieiwovyggaos"]
+[gd_scene load_steps=81 format=4 uid="uid://ieiwovyggaos"]
 
 [ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_avs7i"]
 [ext_resource type="PackedScene" uid="uid://dwg7s2wboui62" path="res://Scenes/Player 2.tscn" id="1_r2l8i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="2_3qqm3"]
 [ext_resource type="Texture2D" uid="uid://b8jqy55ge48vo" path="res://Assets/Updated/Tiles/boxAlt.png" id="3_p8q3d"]
 [ext_resource type="Texture2D" uid="uid://c1a8dx16le863" path="res://Assets/Updated/Tiles/door_closedMid.png" id="4_52u0h"]
+[ext_resource type="Texture2D" uid="uid://dna2xmm5ywy0d" path="res://Assets/Updated/Tiles/liquidLavaTop_mid.png" id="5_rlo3h"]
 [ext_resource type="Texture2D" uid="uid://5q3q3lekfvh8" path="res://Assets/Updated/Tiles/door_closedTop.png" id="5_v04px"]
 [ext_resource type="Texture2D" uid="uid://bh2b5ns0fukr7" path="res://Assets/Updated/Tiles/door_openMid.png" id="6_6ehtp"]
 [ext_resource type="Texture2D" uid="uid://cvtbsqdujwbn3" path="res://Assets/Updated/Tiles/door_openTop.png" id="7_0bqlu"]
@@ -40,11 +41,18 @@
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_lip3g"]
 [ext_resource type="PackedScene" uid="uid://ibn77q78b2h7" path="res://Scenes/killzone.tscn" id="38_vr7pe"]
 [ext_resource type="PackedScene" uid="uid://6qydnickxbr3" path="res://Scenes/Button Green.tscn" id="40_cosqj"]
+[ext_resource type="Script" path="res://Levels/area_2d2.gd" id="42_1faln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo6vm"]
 size = Vector2(31, 18)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tfesw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k2wlg"]
+texture = ExtResource("5_rlo3h")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(68, 68)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0wbd"]
 resource_name = "Box"
@@ -326,6 +334,10 @@ sources/42 = SubResource("TileSetAtlasSource_d0sv5")
 sources/43 = SubResource("TileSetAtlasSource_mhpnn")
 sources/44 = SubResource("TileSetAtlasSource_wbj01")
 sources/45 = SubResource("TileSetAtlasSource_kngad")
+sources/0 = SubResource("TileSetAtlasSource_k2wlg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efwnk"]
+size = Vector2(1348, 662)
 
 [node name="Level 1 Other" type="Node"]
 script = ExtResource("1_v1xq0")
@@ -357,14 +369,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_tfesw")
 
-[node name="Button" type="Button" parent="."]
-offset_left = -624.0
-offset_top = -623.0
-offset_right = -507.0
-offset_bottom = -569.0
-scale = Vector2(1.36, 1.36)
-text = "Normal World"
-
 [node name="Crate2" parent="." groups=["Rigidbody"] instance=ExtResource("1_avs7i")]
 z_index = 1
 position = Vector2(-399, -169)
@@ -375,7 +379,7 @@ lock_rotation = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
-tile_map_data = PackedByteArray("AAAAAAAAJQAAAAAAAAD//wAAJAAAAAAAAAD+/wAAHAAAAAAAAAD9/wAAHAAAAAAAAAD8/wAAHAAAAAAAAAD7/wAAHAAAAAAAAAD6/wAAHAAAAAAAAAD5/wAAHAAAAAAAAAD4/wAAHAAAAAAAAAD3/wAAHAAAAAAAAAD//wEAIAAAAAAAAAD+/wEAGwAAAAAAAAD9/wEAGwAAAAAAAAD8/wEAGwAAAAAAAAD7/wEAGwAAAAAAAAD6/wEAGwAAAAAAAAD5/wEAGwAAAAAAAAD4/wEAGwAAAAAAAAD3/wEAGwAAAAAAAAD3/wIAGwAAAAAAAAD4/wIAGwAAAAAAAAD5/wIAGwAAAAAAAAD6/wIAGwAAAAAAAAD7/wIAGwAAAAAAAAD8/wIAGwAAAAAAAAD9/wIAGwAAAAAAAAD+/wIAGwAAAAAAAAD//wIAIAAAAAAAAAABAAAAJQAAAAAAAAACAAAAJQAAAAAAAAADAAAAJQAAAAAAAAAEAAAAJQAAAAAAAAAFAAAAJQAAAAAAAAAGAAAAJQAAAAAAAAAHAAAAJQAAAAAAAAAIAAAAJQAAAAAAAAABAAEAIAAAAAAAAAACAAEAIAAAAAAAAAADAAEAIAAAAAAAAAAEAAEAIAAAAAAAAAAFAAEAIAAAAAAAAAAGAAEAIAAAAAAAAAAHAAEAIAAAAAAAAAAIAAEAIAAAAAAAAAABAAIAIAAAAAAAAAACAAIAIAAAAAAAAAADAAIAIAAAAAAAAAAEAAIAIAAAAAAAAAAFAAIAIAAAAAAAAAAGAAIAIAAAAAAAAAAHAAIAIAAAAAAAAAAIAAIAIAAAAAAAAAAAAAEAIAAAAAAAAAAAAAIAIAAAAAAAAAD2/wAAHAAAAAAAAAD1/wAAHAAAAAAAAAD0/wAAHAAAAAAAAAD2/wEAGwAAAAAAAAD2/wIAGwAAAAAAAAD1/wIAGwAAAAAAAAD1/wEAGwAAAAAAAAD0/wEAGwAAAAAAAAD0/wIAGwAAAAAAAAAJAAAAJQAAAAAAAAAKAAAAJQAAAAAAAAALAAAAJQAAAAAAAAAJAAEAIAAAAAAAAAAJAAIAIAAAAAAAAAAKAAIAIAAAAAAAAAAKAAEAIAAAAAAAAAALAAEAIAAAAAAAAAALAAIAIAAAAAAAAAD9//7/JgAAAAAAAAD8//7/JgAAAAAAAAD7//7/JgAAAAAAAAD6//7/JgAAAAAAAAD5//7/JgAAAAAAAAD4//7/JgAAAAAAAAD3//7/JAAAAAAAAAABAPz/JAAAAAAAAAACAPz/JgAAAAAAAAD9//r/JgAAAAAAAAD8//r/JAAAAAAAAAAGAPr/JAAAAAAAAAAHAPr/JQAAAAAAAAAIAPr/JQAAAAAAAAAJAPr/JgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAJQAAAAAAAAD//wAAJAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD8/wAAAAAAAAAAAAD7/wAAAAAAAAAAAAD6/wAAAAAAAAAAAAD5/wAAAAAAAAAAAAD4/wAAAAAAAAAAAAD3/wAAAAAAAAAAAAD//wEAIAAAAAAAAAD+/wEAGwAAAAAAAAD9/wEAGwAAAAAAAAD8/wEAGwAAAAAAAAD7/wEAGwAAAAAAAAD6/wEAGwAAAAAAAAD5/wEAGwAAAAAAAAD4/wEAGwAAAAAAAAD3/wEAGwAAAAAAAAD3/wIAGwAAAAAAAAD4/wIAGwAAAAAAAAD5/wIAGwAAAAAAAAD6/wIAGwAAAAAAAAD7/wIAGwAAAAAAAAD8/wIAGwAAAAAAAAD9/wIAGwAAAAAAAAD+/wIAGwAAAAAAAAD//wIAIAAAAAAAAAABAAAAJQAAAAAAAAACAAAAJQAAAAAAAAADAAAAJQAAAAAAAAAEAAAAJQAAAAAAAAAFAAAAJQAAAAAAAAAGAAAAJQAAAAAAAAAHAAAAJQAAAAAAAAAIAAAAJQAAAAAAAAABAAEAIAAAAAAAAAACAAEAIAAAAAAAAAADAAEAIAAAAAAAAAAEAAEAIAAAAAAAAAAFAAEAIAAAAAAAAAAGAAEAIAAAAAAAAAAHAAEAIAAAAAAAAAAIAAEAIAAAAAAAAAABAAIAIAAAAAAAAAACAAIAIAAAAAAAAAADAAIAIAAAAAAAAAAEAAIAIAAAAAAAAAAFAAIAIAAAAAAAAAAGAAIAIAAAAAAAAAAHAAIAIAAAAAAAAAAIAAIAIAAAAAAAAAAAAAEAIAAAAAAAAAAAAAIAIAAAAAAAAAD2/wAAAAAAAAAAAAD1/wAAAAAAAAAAAAD0/wAAAAAAAAAAAAD2/wEAGwAAAAAAAAD2/wIAGwAAAAAAAAD1/wIAGwAAAAAAAAD1/wEAGwAAAAAAAAD0/wEAGwAAAAAAAAD0/wIAGwAAAAAAAAAJAAAAJQAAAAAAAAAKAAAAJQAAAAAAAAALAAAAJQAAAAAAAAAJAAEAIAAAAAAAAAAJAAIAIAAAAAAAAAAKAAIAIAAAAAAAAAAKAAEAIAAAAAAAAAALAAEAIAAAAAAAAAALAAIAIAAAAAAAAAD9//7/JgAAAAAAAAD8//7/JgAAAAAAAAD7//7/JgAAAAAAAAD6//7/JgAAAAAAAAD5//7/JgAAAAAAAAD4//7/JgAAAAAAAAD3//7/JAAAAAAAAAABAPz/JAAAAAAAAAACAPz/JgAAAAAAAAD9//r/JgAAAAAAAAD8//r/JAAAAAAAAAAGAPr/JAAAAAAAAAAHAPr/JQAAAAAAAAAIAPr/JQAAAAAAAAAJAPr/JgAAAAAAAAA=")
 tile_set = SubResource("TileSet_48fux")
 
 [node name="Key Yellow" parent="." instance=ExtResource("35_m2247")]
@@ -390,15 +394,27 @@ collision_layer = 6
 collision_mask = 6
 
 [node name="Label" type="Label" parent="."]
-offset_left = 465.0
+offset_left = 430.0
 offset_top = -310.0
-offset_right = 578.0
-offset_bottom = -235.0
+offset_right = 591.0
+offset_bottom = -209.0
 scale = Vector2(1.48, 1.48)
 text = "< Left
 > Right
-SPACE to Jump"
+SPACE/^ to Jump
+TAB to switch worlds"
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("42_1faln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(34, -321)
+shape = SubResource("RectangleShape2D_efwnk")
 
 [connection signal="body_entered" from="Player 2/Area2D" to="Player 2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 2/Area2D" to="Player 2" method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://df75iu6nnld47"]
+[gd_scene load_steps=79 format=4 uid="uid://df75iu6nnld47"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_vh3ox"]
 [ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="1_vmans"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="38_34jus"]
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="39_rlh26"]
 [ext_resource type="PackedScene" uid="uid://b7ll1qal8ceax" path="res://Scenes/Button Red.tscn" id="40_cd1mv"]
+[ext_resource type="Script" path="res://Scenes/area_2d1.gd" id="41_y4j7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0civv"]
 size = Vector2(31, 18)
@@ -327,51 +328,11 @@ sources/43 = SubResource("TileSetAtlasSource_dyrav")
 sources/44 = SubResource("TileSetAtlasSource_dg1f0")
 sources/45 = SubResource("TileSetAtlasSource_2vs86")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_003nl"]
+size = Vector2(1362, 723)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_vh3ox")
-
-[node name="Player 1" parent="." instance=ExtResource("1_vmans")]
-position = Vector2(-507, 0)
-collision_layer = 6
-
-[node name="Area2D" type="Area2D" parent="Player 1"]
-collision_layer = 4
-collision_mask = 7
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1/Area2D"]
-position = Vector2(-0.5, -7)
-shape = SubResource("RectangleShape2D_0civv")
-
-[node name="Killzone" parent="." instance=ExtResource("2_y4ssu")]
-position = Vector2(-2, 184)
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_erjxw")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 456.0
-offset_top = -622.0
-offset_right = 593.0
-offset_bottom = -564.0
-scale = Vector2(1.2, 1.2)
-text = "Other World"
-
-[node name="Button Red" parent="." instance=ExtResource("40_cd1mv")]
-position = Vector2(237, -135)
-collision_layer = 6
-collision_mask = 6
-
-[node name="Label" type="Label" parent="."]
-offset_left = -603.0
-offset_top = -310.0
-offset_right = -490.0
-offset_bottom = -235.0
-scale = Vector2(1.48, 1.48)
-text = "< Left
-> Right
-SPACE to Jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-34, -267)
@@ -380,6 +341,42 @@ scale = Vector2(0.538569, 28144.4)
 zoom = Vector2(0.85, 0.85)
 
 [node name="Normal" type="Node" parent="."]
+
+[node name="Player 1" parent="Normal" instance=ExtResource("1_vmans")]
+position = Vector2(-507, 0)
+collision_layer = 6
+
+[node name="Area2D" type="Area2D" parent="Normal/Player 1"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Normal/Player 1/Area2D"]
+position = Vector2(-0.5, -7)
+shape = SubResource("RectangleShape2D_0civv")
+
+[node name="Killzone" parent="Normal" instance=ExtResource("2_y4ssu")]
+position = Vector2(-2, 184)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Normal/Killzone"]
+shape = SubResource("WorldBoundaryShape2D_erjxw")
+
+[node name="Button Red" parent="Normal" instance=ExtResource("40_cd1mv")]
+position = Vector2(237, -135)
+collision_layer = 6
+collision_mask = 6
+
+[node name="Label" type="Label" parent="Normal"]
+offset_left = -665.0
+offset_top = -310.0
+offset_right = -504.0
+offset_bottom = -209.0
+scale = Vector2(1.48, 1.48)
+text = "< Left
+> Right
+SPACE/^ to Jump
+TAB to switch worlds"
 
 [node name="Crate" parent="Normal" groups=["Rigidbody"] instance=ExtResource("4_iqvcn")]
 z_index = 1
@@ -399,6 +396,17 @@ position = Vector2(204, -407)
 [node name="Next Level" parent="Normal" instance=ExtResource("39_rlh26")]
 position = Vector2(-544, -407)
 
-[connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Area2D" type="Area2D" parent="Normal"]
+visible = false
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("41_y4j7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Normal/Area2D"]
+position = Vector2(-34, -286.5)
+shape = SubResource("RectangleShape2D_003nl")
+
+[connection signal="body_entered" from="Normal/Player 1/Area2D" to="Normal/Player 1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Normal/Player 1/Area2D" to="Normal/Player 1" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Normal/Area2D" to="Normal/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Normal/Area2D" to="Normal/Area2D" method="_on_body_exited"]

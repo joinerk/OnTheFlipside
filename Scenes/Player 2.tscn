@@ -48,6 +48,7 @@ position = Vector2(0, -47)
 sprite_frames = SubResource("SpriteFrames_kto6v")
 animation = &"Stand"
 autoplay = "Stand"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -42.5)
