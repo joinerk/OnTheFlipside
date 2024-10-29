@@ -3,6 +3,18 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+10-29-2024 - 3hr: Fixed Other world crate
+- Fixed crate in other world so players can jump on it
+- Tried to figure out how to make Tab key switch level
+- Tried to figure out how to keep objects from moving between switch
+- TODO:
+  - Tab key
+  - Keep objects in place
+  - In-game button
+- Still struggling to figure out how to get objects to stay between switching (getting an error currently)
+- Still need to figure out how to make the Tab key switch levels
+
+
 10-22-2024 - 3.5hr: Added button (unresponsive) and directional movement
 - Added an Area2D for the button, but it is currently unresponsive
 - Added directional movement for player characters
