@@ -3,6 +3,18 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+11-4-2024 - 2hr: Autosave
+- Added start menu and autosave/load feature
+- Having issues where closing and reopening game makes it so game does not continue autosaving
+  and using TAB in Other world brings user to menu instead of Normal world
+- And issue where using TAB after stopping and starting game merges worlds
+https://youtu.be/5ZUyvZSL1-0?si=K7yKxPqW-tWNO6Vz
+- TODO:
+  - Sort out save/load issues
+  - In-game switch
+  - Door/Game complete
+
+
 10-29-2024 - 2hr: Packaging scenes
 - Made scenes switch with TAB key
 - Trying to figure out how to package scenes for levels

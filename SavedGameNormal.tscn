@@ -1,46 +1,51 @@
-[gd_scene load_steps=79 format=4 uid="uid://dmsmebg8rrtj0"]
+[gd_scene load_steps=84 format=4]
 
-[ext_resource type="Script" path="res://Levels/level_1_normal.gd" id="1_4tps3"]
-[ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_yxph3"]
-[ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="2_4rc46"]
-[ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="2_tjpy5"]
-[ext_resource type="PackedScene" uid="uid://ibn77q78b2h7" path="res://Scenes/killzone.tscn" id="3_f6y6q"]
-[ext_resource type="Texture2D" uid="uid://b8jqy55ge48vo" path="res://Assets/Updated/Tiles/boxAlt.png" id="3_khipm"]
-[ext_resource type="Texture2D" uid="uid://c1a8dx16le863" path="res://Assets/Updated/Tiles/door_closedMid.png" id="4_cw06a"]
-[ext_resource type="PackedScene" uid="uid://b7ll1qal8ceax" path="res://Scenes/Button Red.tscn" id="4_n2rn6"]
-[ext_resource type="Texture2D" uid="uid://5q3q3lekfvh8" path="res://Assets/Updated/Tiles/door_closedTop.png" id="5_as2g5"]
-[ext_resource type="Texture2D" uid="uid://bh2b5ns0fukr7" path="res://Assets/Updated/Tiles/door_openMid.png" id="6_nndgp"]
-[ext_resource type="Texture2D" uid="uid://cvtbsqdujwbn3" path="res://Assets/Updated/Tiles/door_openTop.png" id="7_f0uh4"]
-[ext_resource type="Texture2D" uid="uid://byn23tonvfni8" path="res://Assets/Updated/Tiles/grassCenter.png" id="8_3cyaf"]
-[ext_resource type="Texture2D" uid="uid://b668qd5lgkkk1" path="res://Assets/Updated/Tiles/grassCenter_rounded.png" id="9_uoitt"]
-[ext_resource type="Texture2D" uid="uid://bqov0ow1wvx0d" path="res://Assets/Updated/Tiles/grassHalfLeft.png" id="10_g8pjg"]
-[ext_resource type="Texture2D" uid="uid://bn3vaol50dtr" path="res://Assets/Updated/Tiles/grassHalfMid.png" id="11_a34wg"]
-[ext_resource type="Texture2D" uid="uid://bdelylusqqv0p" path="res://Assets/Updated/Tiles/grassHalfRight.png" id="12_dwogc"]
-[ext_resource type="Texture2D" uid="uid://cj82vjv3c8pdh" path="res://Assets/Updated/Tiles/grassLeft.png" id="13_0u70w"]
-[ext_resource type="Texture2D" uid="uid://c5cj8nogilj3" path="res://Assets/Updated/Tiles/grassMid.png" id="14_tvmlm"]
-[ext_resource type="Texture2D" uid="uid://dnlmvuq5vs6ym" path="res://Assets/Updated/Tiles/grassRight.png" id="15_xdqj8"]
-[ext_resource type="Texture2D" uid="uid://cfhlfarwe8ght" path="res://Assets/Updated/Tiles/liquidLava.png" id="16_cyu1c"]
-[ext_resource type="Texture2D" uid="uid://bxqciwt6c0ejr" path="res://Assets/Updated/Tiles/liquidLavaTop.png" id="17_xo7rb"]
-[ext_resource type="Texture2D" uid="uid://da181vls5qcvq" path="res://Assets/Updated/Tiles/liquidWater.png" id="18_t53b6"]
-[ext_resource type="Texture2D" uid="uid://1ihrb0ygl7l8" path="res://Assets/Updated/Tiles/liquidWaterTop.png" id="19_w83kw"]
-[ext_resource type="Texture2D" uid="uid://bxr7o0ag617pa" path="res://Assets/Updated/Tiles/signExit.png" id="20_lgtxd"]
-[ext_resource type="Texture2D" uid="uid://c6uq51qn160h3" path="res://Assets/Updated/Tiles/stoneCenter.png" id="21_kkyfd"]
-[ext_resource type="Texture2D" uid="uid://dp5df3fuk7ksk" path="res://Assets/Updated/Tiles/stoneHalfLeft.png" id="22_sthjf"]
-[ext_resource type="Texture2D" uid="uid://xmlyb33ggred" path="res://Assets/Updated/Tiles/stoneHalfMid.png" id="23_qjv3p"]
-[ext_resource type="Texture2D" uid="uid://ddybbj12tf0wu" path="res://Assets/Updated/Tiles/stoneHalfRight.png" id="24_o046c"]
-[ext_resource type="Texture2D" uid="uid://b8t2ffi52d1mc" path="res://Assets/Updated/Tiles/stoneLeft.png" id="25_aknnh"]
-[ext_resource type="Texture2D" uid="uid://cfqvny17g47mu" path="res://Assets/Updated/Tiles/stoneMid.png" id="26_3wjte"]
-[ext_resource type="Texture2D" uid="uid://cvp625gik3tqr" path="res://Assets/Updated/Tiles/stoneRight.png" id="27_4fgyt"]
-[ext_resource type="Texture2D" uid="uid://c11xojujbngss" path="res://Assets/Updated/Tiles/grass.png" id="28_hyexg"]
-[ext_resource type="Texture2D" uid="uid://5imvlu3sy4w5" path="res://Assets/Updated/Tiles/stone.png" id="29_7y8ab"]
-[ext_resource type="Texture2D" uid="uid://df33b5b3qv86k" path="res://Assets/Updated/Tiles/liquidWaterTop_mid.png" id="30_fu7fd"]
-[ext_resource type="Texture2D" uid="uid://dlv4ss0djhwdr" path="res://Assets/Updated/Items/buttonGreen.png" id="31_vidar"]
-[ext_resource type="Texture2D" uid="uid://ch1rjeq00d5ls" path="res://Assets/Updated/Items/buttonGreen_pressed.png" id="32_b4fjg"]
-[ext_resource type="Texture2D" uid="uid://c5sygemk3cki5" path="res://Assets/Updated/Items/buttonRed.png" id="33_641rq"]
-[ext_resource type="Texture2D" uid="uid://dsrjbjiyli2hp" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="34_2ig5k"]
-[ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="35_powr8"]
-[ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_pli84"]
-[ext_resource type="Script" path="res://Scenes/area_2d1.gd" id="41_qqlsx"]
+[ext_resource type="Script" path="res://Levels/level_1_normal.gd" id="1_4jk1d"]
+[ext_resource type="PackedScene" path="res://Scenes/Player 1.tscn" id="2_o1rlf"]
+[ext_resource type="Script" path="res://Scripts/player_1.gd" id="3_15jsm"]
+[ext_resource type="PackedScene" path="res://Scenes/killzone.tscn" id="4_jukcg"]
+[ext_resource type="Script" path="res://Scripts/killzone.gd" id="5_0hahl"]
+[ext_resource type="PackedScene" path="res://Scenes/Button Red.tscn" id="6_lkfbs"]
+[ext_resource type="Script" path="res://Scenes/button_red.gd" id="7_v34jb"]
+[ext_resource type="PackedScene" path="res://Scenes/Crate.tscn" id="8_xnfd0"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/box.png" id="9_pv3hq"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/boxAlt.png" id="10_331cc"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/door_closedMid.png" id="11_4cnpc"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/door_closedTop.png" id="12_5gkm4"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/door_openMid.png" id="13_tkv1f"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/door_openTop.png" id="14_drk7g"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassCenter.png" id="15_owe6j"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassCenter_rounded.png" id="16_x78hi"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassHalfLeft.png" id="17_0kacg"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassHalfMid.png" id="18_2mmaq"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassHalfRight.png" id="19_2w5h7"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassLeft.png" id="20_uy581"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassMid.png" id="21_14mnq"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grassRight.png" id="22_lft15"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/liquidLava.png" id="23_6178s"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/liquidLavaTop.png" id="24_eq2nm"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/liquidWater.png" id="25_vfh0r"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/liquidWaterTop.png" id="26_iv6vx"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/signExit.png" id="27_53dda"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneCenter.png" id="28_uwwsr"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneHalfLeft.png" id="29_oc52q"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneHalfMid.png" id="30_jtw5c"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneHalfRight.png" id="31_bd4en"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneLeft.png" id="32_qm7rv"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneMid.png" id="33_r3pal"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stoneRight.png" id="34_ymagg"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/grass.png" id="35_1h2ls"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/stone.png" id="36_28slu"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Tiles/liquidWaterTop_mid.png" id="37_a8c17"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Items/buttonGreen.png" id="38_xs1ul"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Items/buttonGreen_pressed.png" id="39_upuxk"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Items/buttonRed.png" id="40_l03du"]
+[ext_resource type="Texture2D" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="41_o6nby"]
+[ext_resource type="PackedScene" path="res://Scenes/Key Yellow.tscn" id="42_e8nfd"]
+[ext_resource type="Script" path="res://Scripts/key_yellow.gd" id="43_0g474"]
+[ext_resource type="PackedScene" path="res://Scenes/Next Level.tscn" id="44_dlwk4"]
+[ext_resource type="Script" path="res://Scripts/next_level.gd" id="45_2dkrr"]
+[ext_resource type="Script" path="res://Scenes/area_2d1.gd" id="46_7u05w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30bwu"]
 size = Vector2(31, 18)
@@ -49,49 +54,49 @@ size = Vector2(31, 18)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ru4s"]
 resource_name = "Box"
-texture = ExtResource("2_4rc46")
+texture = ExtResource("9_pv3hq")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj0qb"]
 resource_name = "Box 2"
-texture = ExtResource("3_khipm")
+texture = ExtResource("10_331cc")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uh822"]
 resource_name = "Door C"
-texture = ExtResource("4_cw06a")
+texture = ExtResource("11_4cnpc")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlln7"]
 resource_name = "Door C Top"
-texture = ExtResource("5_as2g5")
+texture = ExtResource("12_5gkm4")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ny6y"]
 resource_name = "Door O"
-texture = ExtResource("6_nndgp")
+texture = ExtResource("13_tkv1f")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybkx8"]
 resource_name = "Door O Top"
-texture = ExtResource("7_f0uh4")
+texture = ExtResource("14_drk7g")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44fg6"]
 resource_name = "Grass C"
-texture = ExtResource("8_3cyaf")
+texture = ExtResource("15_owe6j")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -99,7 +104,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g50eb"]
 resource_name = "Grass C R"
-texture = ExtResource("9_uoitt")
+texture = ExtResource("16_x78hi")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -107,7 +112,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0lui4"]
 resource_name = "Half Grass L"
-texture = ExtResource("10_g8pjg")
+texture = ExtResource("17_0kacg")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -115,7 +120,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jscdd"]
 resource_name = "Half Grass M"
-texture = ExtResource("11_a34wg")
+texture = ExtResource("18_2mmaq")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -123,7 +128,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15qey"]
 resource_name = "Half Grass R"
-texture = ExtResource("12_dwogc")
+texture = ExtResource("19_2w5h7")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -131,7 +136,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6i33r"]
 resource_name = "Grass L"
-texture = ExtResource("13_0u70w")
+texture = ExtResource("20_uy581")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -139,7 +144,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd8vg"]
 resource_name = "Grass Mid"
-texture = ExtResource("14_tvmlm")
+texture = ExtResource("21_14mnq")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -147,7 +152,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7adu"]
 resource_name = "Grass R"
-texture = ExtResource("15_xdqj8")
+texture = ExtResource("22_lft15")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -155,42 +160,42 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tc11"]
 resource_name = "Lava M"
-texture = ExtResource("16_cyu1c")
+texture = ExtResource("23_6178s")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r5oy"]
 resource_name = "Lava T"
-texture = ExtResource("17_xo7rb")
+texture = ExtResource("24_eq2nm")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dscvj"]
 resource_name = "Water M"
-texture = ExtResource("18_t53b6")
+texture = ExtResource("25_vfh0r")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_plgoa"]
 resource_name = "Water Top"
-texture = ExtResource("19_w83kw")
+texture = ExtResource("26_iv6vx")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mswy"]
 resource_name = "Exit"
-texture = ExtResource("20_lgtxd")
+texture = ExtResource("27_53dda")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yuoeu"]
 resource_name = "Stone M"
-texture = ExtResource("21_kkyfd")
+texture = ExtResource("28_uwwsr")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -198,7 +203,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_13q62"]
 resource_name = "Half Stone L"
-texture = ExtResource("22_sthjf")
+texture = ExtResource("29_oc52q")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -206,7 +211,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mrwdj"]
 resource_name = "Half Stone M"
-texture = ExtResource("23_qjv3p")
+texture = ExtResource("30_jtw5c")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -214,7 +219,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_viq7d"]
 resource_name = "Half Stone R"
-texture = ExtResource("24_o046c")
+texture = ExtResource("31_bd4en")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -222,7 +227,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4mio"]
 resource_name = "Stone L"
-texture = ExtResource("25_aknnh")
+texture = ExtResource("32_qm7rv")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -230,7 +235,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l53t5"]
 resource_name = "Stone M"
-texture = ExtResource("26_3wjte")
+texture = ExtResource("33_r3pal")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -238,7 +243,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tg88m"]
 resource_name = "Stone R"
-texture = ExtResource("27_4fgyt")
+texture = ExtResource("34_ymagg")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -246,7 +251,7 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d1nc"]
 resource_name = "Grass"
-texture = ExtResource("28_hyexg")
+texture = ExtResource("35_1h2ls")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -254,38 +259,38 @@ texture_region_size = Vector2i(68, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3arf3"]
 resource_name = "Stone"
-texture = ExtResource("29_7y8ab")
+texture = ExtResource("36_28slu")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ub2qs"]
-texture = ExtResource("30_fu7fd")
+texture = ExtResource("37_a8c17")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ww2kx"]
-texture = ExtResource("31_vidar")
+texture = ExtResource("38_xs1ul")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6w02l"]
-texture = ExtResource("32_b4fjg")
+texture = ExtResource("39_upuxk")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_unx3j"]
-texture = ExtResource("33_641rq")
+texture = ExtResource("40_l03du")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojypg"]
-texture = ExtResource("34_2ig5k")
+texture = ExtResource("41_o6nby")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
@@ -332,7 +337,7 @@ sources/45 = SubResource("TileSetAtlasSource_ojypg")
 size = Vector2(1362, 723)
 
 [node name="Level 1 Normal" type="Node"]
-script = ExtResource("1_4tps3")
+script = ExtResource("1_4jk1d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-34, -267)
@@ -340,9 +345,11 @@ rotation = -3.14159
 scale = Vector2(0.538569, 28144.4)
 zoom = Vector2(0.85, 0.85)
 
-[node name="Player 1" parent="." instance=ExtResource("2_tjpy5")]
-position = Vector2(-507, 0)
+[node name="Player 1" type="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_o1rlf")]
+z_index = 5
+position = Vector2(-198.195, 0.965658)
 collision_layer = 6
+script = ExtResource("3_15jsm")
 
 [node name="Area2D" type="Area2D" parent="Player 1"]
 collision_layer = 4
@@ -352,18 +359,20 @@ collision_mask = 7
 position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_30bwu")
 
-[node name="Killzone" parent="." instance=ExtResource("3_f6y6q")]
+[node name="Killzone" type="Area2D" parent="." instance=ExtResource("4_jukcg")]
 position = Vector2(-2, 184)
 collision_layer = 4
 collision_mask = 4
+script = ExtResource("5_0hahl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_svpo3")
 
-[node name="Button Red" parent="." instance=ExtResource("4_n2rn6")]
+[node name="Button Red" type="Area2D" parent="." instance=ExtResource("6_lkfbs")]
 position = Vector2(237, -135)
 collision_layer = 6
 collision_mask = 6
+script = ExtResource("7_v34jb")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -665.0
@@ -376,11 +385,13 @@ text = "< Left
 SPACE/^ to Jump
 TAB to switch worlds"
 
-[node name="Crate2" parent="." groups=["Rigidbody"] instance=ExtResource("1_yxph3")]
+[node name="Crate2" type="RigidBody2D" parent="." groups=["Rigidbody"] instance=ExtResource("8_xnfd0")]
 z_index = 1
-position = Vector2(399, -169)
-collision_layer = 6
+position = Vector2(-33.3, -33.7)
+collision_layer = 2
+collision_mask = 2
 gravity_scale = 4.0
+sleeping = true
 lock_rotation = true
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
@@ -388,27 +399,32 @@ position = Vector2(0, 1)
 tile_map_data = PackedByteArray("AAAAAAAAGgAAAAAAAAD//wAAGQAAAAAAAAD+/wAAGQAAAAAAAAD9/wAAGQAAAAAAAAD8/wAAGQAAAAAAAAD7/wAAGQAAAAAAAAD6/wAAGQAAAAAAAAD5/wAAGQAAAAAAAAD4/wAAGQAAAAAAAAD3/wAAGQAAAAAAAAD//wEAEwAAAAAAAAD+/wEAEwAAAAAAAAD9/wEAEwAAAAAAAAD8/wEAEwAAAAAAAAD7/wEAEwAAAAAAAAD6/wEAEwAAAAAAAAD5/wEAEwAAAAAAAAD4/wEAEwAAAAAAAAD3/wEAEwAAAAAAAAD3/wIAEwAAAAAAAAD4/wIAEwAAAAAAAAD5/wIAEwAAAAAAAAD6/wIAEwAAAAAAAAD7/wIAEwAAAAAAAAD8/wIAEwAAAAAAAAD9/wIAEwAAAAAAAAD+/wIAEwAAAAAAAAD//wIAEwAAAAAAAAABAAAAKQAAAAAAAAACAAAAKQAAAAAAAAADAAAAKQAAAAAAAAAEAAAAKQAAAAAAAAAFAAAAKQAAAAAAAAAGAAAAKQAAAAAAAAAHAAAAKQAAAAAAAAAIAAAAKQAAAAAAAAABAAEAHQAAAAAAAAACAAEAHQAAAAAAAAADAAEAHQAAAAAAAAAEAAEAHQAAAAAAAAAFAAEAHQAAAAAAAAAGAAEAHQAAAAAAAAAHAAEAHQAAAAAAAAAIAAEAHQAAAAAAAAABAAIAHQAAAAAAAAACAAIAHQAAAAAAAAADAAIAHQAAAAAAAAAEAAIAHQAAAAAAAAAFAAIAHQAAAAAAAAAGAAIAHQAAAAAAAAAHAAIAHQAAAAAAAAAIAAIAHQAAAAAAAAAAAAEAEwAAAAAAAAAAAAIAEwAAAAAAAAACAP7/GAAAAAAAAAADAP7/GQAAAAAAAAAEAP7/GQAAAAAAAAAFAP7/GQAAAAAAAAAGAP7/GQAAAAAAAAAHAP7/GQAAAAAAAAD3//r/GQAAAAAAAAD4//r/GQAAAAAAAAD5//r/GgAAAAAAAAD+//z/GgAAAAAAAAD9//z/GAAAAAAAAAACAPr/GAAAAAAAAAADAPr/GgAAAAAAAAD2/wAAGQAAAAAAAAD1/wAAGQAAAAAAAAD0/wAAGQAAAAAAAAD2/wEAEwAAAAAAAAD2/wIAEwAAAAAAAAD1/wIAEwAAAAAAAAD1/wEAEwAAAAAAAAD0/wEAEwAAAAAAAAD0/wIAEwAAAAAAAAAJAAAAKQAAAAAAAAAKAAAAKQAAAAAAAAALAAAAKQAAAAAAAAAJAAEAHQAAAAAAAAAJAAIAHQAAAAAAAAAKAAIAHQAAAAAAAAAKAAEAHQAAAAAAAAALAAEAHQAAAAAAAAALAAIAHQAAAAAAAAD2//r/GAAAAAAAAAAIAP7/GgAAAAAAAAA=")
 tile_set = SubResource("TileSet_p6j5w")
 
-[node name="Key Yellow2" parent="." instance=ExtResource("35_powr8")]
+[node name="Key Yellow2" type="Area2D" parent="." instance=ExtResource("42_e8nfd")]
 position = Vector2(204, -407)
+collision_mask = 2
+script = ExtResource("43_0g474")
 
-[node name="Next Level2" parent="." instance=ExtResource("36_pli84")]
+[node name="Next Level2" type="Area2D" parent="." instance=ExtResource("44_dlwk4")]
 position = Vector2(-544, -407)
+script = ExtResource("45_2dkrr")
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
 collision_layer = 7
 collision_mask = 7
-script = ExtResource("41_qqlsx")
+script = ExtResource("46_7u05w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-34, -286.5)
 shape = SubResource("RectangleShape2D_gdku5")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
+[connection signal="body_entered" from="Key Yellow2" to="Key Yellow2" method="_on_body_entered"]
+[connection signal="body_entered" from="Next Level2" to="Next Level2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
