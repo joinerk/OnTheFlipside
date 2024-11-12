@@ -10,8 +10,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-
-func _on_button_pressed() -> void:
+# Load game
+#func _on_button_pressed() -> void:
 	if !FileAccess.file_exists("res://SavedGameNormal.tscn"):
 		#Start game in "new" game
 		get_tree().change_scene_to_file("res://Levels/level_1_normal.tscn")

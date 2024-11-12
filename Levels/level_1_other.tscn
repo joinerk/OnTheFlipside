@@ -41,62 +41,62 @@
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_lip3g"]
 [ext_resource type="PackedScene" uid="uid://ibn77q78b2h7" path="res://Scenes/killzone.tscn" id="38_vr7pe"]
 [ext_resource type="PackedScene" uid="uid://6qydnickxbr3" path="res://Scenes/Button Green.tscn" id="40_cosqj"]
-[ext_resource type="Script" path="res://Levels/area_2d2.gd" id="42_1faln"]
+[ext_resource type="Script" path="res://area_2d2.gd" id="42_1faln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo6vm"]
 size = Vector2(31, 18)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tfesw"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k2wlg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g12mj"]
 texture = ExtResource("5_rlo3h")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t0wbd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_441h8"]
 resource_name = "Box"
 texture = ExtResource("2_3qqm3")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68isd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7cpxl"]
 resource_name = "Box 2"
 texture = ExtResource("3_p8q3d")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jdtf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pj25n"]
 resource_name = "Door C"
 texture = ExtResource("4_52u0h")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sbjn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1loso"]
 resource_name = "Door C Top"
 texture = ExtResource("5_v04px")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7glxb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fiqnx"]
 resource_name = "Door O"
 texture = ExtResource("6_6ehtp")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kklks"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_512w7"]
 resource_name = "Door O Top"
 texture = ExtResource("7_0bqlu")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udoes"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krk13"]
 resource_name = "Grass C"
 texture = ExtResource("8_w0odr")
 margins = Vector2i(1, 1)
@@ -104,7 +104,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mai5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dau1x"]
 resource_name = "Grass C R"
 texture = ExtResource("9_34vag")
 margins = Vector2i(1, 1)
@@ -112,7 +112,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cr728"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byoya"]
 resource_name = "Half Grass L"
 texture = ExtResource("10_rb7n4")
 margins = Vector2i(1, 1)
@@ -120,7 +120,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32sux"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud5yy"]
 resource_name = "Half Grass M"
 texture = ExtResource("11_ks1il")
 margins = Vector2i(1, 1)
@@ -128,7 +128,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 6, -34, 5.25)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fv2k"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lxu2"]
 resource_name = "Half Grass R"
 texture = ExtResource("12_yesdr")
 margins = Vector2i(1, 1)
@@ -136,7 +136,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 6, -34, 5.25)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blqmj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uv5t0"]
 resource_name = "Grass L"
 texture = ExtResource("13_p7uc5")
 margins = Vector2i(1, 1)
@@ -144,7 +144,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qu4c7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_un1nu"]
 resource_name = "Grass Mid"
 texture = ExtResource("14_e0ja7")
 margins = Vector2i(1, 1)
@@ -152,7 +152,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4i1s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6ock"]
 resource_name = "Grass R"
 texture = ExtResource("15_7t5sc")
 margins = Vector2i(1, 1)
@@ -160,42 +160,42 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbj52"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pybot"]
 resource_name = "Lava M"
 texture = ExtResource("16_ehwyj")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6fkg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5hpif"]
 resource_name = "Lava T"
 texture = ExtResource("17_jome3")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xfg8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tj3my"]
 resource_name = "Water M"
 texture = ExtResource("18_22vaa")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ni21j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vojw"]
 resource_name = "Water Top"
 texture = ExtResource("19_q1bow")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ajn4c"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_630pv"]
 resource_name = "Exit"
 texture = ExtResource("20_xfq8g")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3bkr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kib1s"]
 resource_name = "Stone M"
 texture = ExtResource("21_js7rc")
 margins = Vector2i(1, 1)
@@ -203,7 +203,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n7ou"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elax4"]
 resource_name = "Half Stone L"
 texture = ExtResource("22_nkosd")
 margins = Vector2i(1, 1)
@@ -211,7 +211,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 6, -34, 5.25)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ema6v"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8t6o"]
 resource_name = "Half Stone M"
 texture = ExtResource("23_1modn")
 margins = Vector2i(1, 1)
@@ -219,7 +219,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 6, -34, 5.25)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g778l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf30i"]
 resource_name = "Half Stone R"
 texture = ExtResource("24_3d1e3")
 margins = Vector2i(1, 1)
@@ -227,7 +227,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 6, -34, 5.25)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6skn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_manav"]
 resource_name = "Stone L"
 texture = ExtResource("25_8wfat")
 margins = Vector2i(1, 1)
@@ -235,7 +235,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhpq2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ht0v"]
 resource_name = "Stone M"
 texture = ExtResource("26_rrqa5")
 margins = Vector2i(1, 1)
@@ -243,7 +243,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfiv5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsert"]
 resource_name = "Stone R"
 texture = ExtResource("27_m38u1")
 margins = Vector2i(1, 1)
@@ -251,7 +251,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_07h64"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1l66x"]
 resource_name = "Grass"
 texture = ExtResource("28_fmnlb")
 margins = Vector2i(1, 1)
@@ -259,7 +259,7 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4doi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t672"]
 resource_name = "Stone"
 texture = ExtResource("29_l0sqx")
 margins = Vector2i(1, 1)
@@ -267,31 +267,31 @@ texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nns1o"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fr6c"]
 texture = ExtResource("30_rbqk2")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0sv5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c217l"]
 texture = ExtResource("31_apmhl")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhpnn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6sbb"]
 texture = ExtResource("32_tj02d")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbj01"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jxdy"]
 texture = ExtResource("33_ltjfd")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kngad"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h731"]
 texture = ExtResource("34_0tm4j")
 margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
@@ -301,40 +301,40 @@ texture_region_size = Vector2i(68, 68)
 tile_size = Vector2i(68, 68)
 physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
-sources/13 = SubResource("TileSetAtlasSource_t0wbd")
-sources/14 = SubResource("TileSetAtlasSource_68isd")
-sources/15 = SubResource("TileSetAtlasSource_2jdtf")
-sources/16 = SubResource("TileSetAtlasSource_2sbjn")
-sources/17 = SubResource("TileSetAtlasSource_7glxb")
-sources/18 = SubResource("TileSetAtlasSource_kklks")
-sources/19 = SubResource("TileSetAtlasSource_udoes")
-sources/20 = SubResource("TileSetAtlasSource_2mai5")
-sources/21 = SubResource("TileSetAtlasSource_cr728")
-sources/22 = SubResource("TileSetAtlasSource_32sux")
-sources/23 = SubResource("TileSetAtlasSource_6fv2k")
-sources/24 = SubResource("TileSetAtlasSource_blqmj")
-sources/25 = SubResource("TileSetAtlasSource_qu4c7")
-sources/26 = SubResource("TileSetAtlasSource_w4i1s")
-sources/27 = SubResource("TileSetAtlasSource_wbj52")
-sources/28 = SubResource("TileSetAtlasSource_x6fkg")
-sources/29 = SubResource("TileSetAtlasSource_5xfg8")
-sources/30 = SubResource("TileSetAtlasSource_ni21j")
-sources/31 = SubResource("TileSetAtlasSource_ajn4c")
-sources/32 = SubResource("TileSetAtlasSource_g3bkr")
-sources/33 = SubResource("TileSetAtlasSource_1n7ou")
-sources/34 = SubResource("TileSetAtlasSource_ema6v")
-sources/35 = SubResource("TileSetAtlasSource_g778l")
-sources/36 = SubResource("TileSetAtlasSource_c6skn")
-sources/37 = SubResource("TileSetAtlasSource_fhpq2")
-sources/38 = SubResource("TileSetAtlasSource_rfiv5")
-sources/39 = SubResource("TileSetAtlasSource_07h64")
-sources/40 = SubResource("TileSetAtlasSource_v4doi")
-sources/41 = SubResource("TileSetAtlasSource_nns1o")
-sources/42 = SubResource("TileSetAtlasSource_d0sv5")
-sources/43 = SubResource("TileSetAtlasSource_mhpnn")
-sources/44 = SubResource("TileSetAtlasSource_wbj01")
-sources/45 = SubResource("TileSetAtlasSource_kngad")
-sources/0 = SubResource("TileSetAtlasSource_k2wlg")
+sources/13 = SubResource("TileSetAtlasSource_441h8")
+sources/14 = SubResource("TileSetAtlasSource_7cpxl")
+sources/15 = SubResource("TileSetAtlasSource_pj25n")
+sources/16 = SubResource("TileSetAtlasSource_1loso")
+sources/17 = SubResource("TileSetAtlasSource_fiqnx")
+sources/18 = SubResource("TileSetAtlasSource_512w7")
+sources/19 = SubResource("TileSetAtlasSource_krk13")
+sources/20 = SubResource("TileSetAtlasSource_dau1x")
+sources/21 = SubResource("TileSetAtlasSource_byoya")
+sources/22 = SubResource("TileSetAtlasSource_ud5yy")
+sources/23 = SubResource("TileSetAtlasSource_3lxu2")
+sources/24 = SubResource("TileSetAtlasSource_uv5t0")
+sources/25 = SubResource("TileSetAtlasSource_un1nu")
+sources/26 = SubResource("TileSetAtlasSource_q6ock")
+sources/27 = SubResource("TileSetAtlasSource_pybot")
+sources/28 = SubResource("TileSetAtlasSource_5hpif")
+sources/29 = SubResource("TileSetAtlasSource_tj3my")
+sources/30 = SubResource("TileSetAtlasSource_2vojw")
+sources/31 = SubResource("TileSetAtlasSource_630pv")
+sources/32 = SubResource("TileSetAtlasSource_kib1s")
+sources/33 = SubResource("TileSetAtlasSource_elax4")
+sources/34 = SubResource("TileSetAtlasSource_y8t6o")
+sources/35 = SubResource("TileSetAtlasSource_pf30i")
+sources/36 = SubResource("TileSetAtlasSource_manav")
+sources/37 = SubResource("TileSetAtlasSource_8ht0v")
+sources/38 = SubResource("TileSetAtlasSource_wsert")
+sources/39 = SubResource("TileSetAtlasSource_1l66x")
+sources/40 = SubResource("TileSetAtlasSource_3t672")
+sources/41 = SubResource("TileSetAtlasSource_0fr6c")
+sources/42 = SubResource("TileSetAtlasSource_c217l")
+sources/43 = SubResource("TileSetAtlasSource_p6sbb")
+sources/44 = SubResource("TileSetAtlasSource_3jxdy")
+sources/45 = SubResource("TileSetAtlasSource_0h731")
+sources/0 = SubResource("TileSetAtlasSource_g12mj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efwnk"]
 size = Vector2(1348, 662)
@@ -403,6 +403,7 @@ text = "< Left
 > Right
 SPACE/^ to Jump
 TAB to switch worlds"
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -414,11 +415,7 @@ script = ExtResource("42_1faln")
 position = Vector2(34, -321)
 shape = SubResource("RectangleShape2D_efwnk")
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [connection signal="body_entered" from="Player 2/Area2D" to="Player 2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 2/Area2D" to="Player 2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

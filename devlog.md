@@ -3,6 +3,15 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+11-12-2024 - 4hr: Switch
+- Removed Autosave (can be re-added later if necessary)
+- Currently, both Normal + Other appear overlapped, + TAB does not toggle anything
+- Players are moveable, but stuck under platform
+- Would like to request to change mechanic in order to have game playable by demo day
+- TODO:
+  - Request mechanic change
+  - Keep truckin' on
+
 11-4-2024 - 2hr: Autosave
 - Added start menu and autosave/load feature
 - Having issues where closing and reopening game makes it so game does not continue autosaving

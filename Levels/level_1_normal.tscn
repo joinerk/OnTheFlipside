@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://dmsmebg8rrtj0"]
+[gd_scene load_steps=80 format=4 uid="uid://dmsmebg8rrtj0"]
 
 [ext_resource type="Script" path="res://Levels/level_1_normal.gd" id="1_4tps3"]
 [ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_yxph3"]
@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="35_powr8"]
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_pli84"]
 [ext_resource type="Script" path="res://Scenes/area_2d1.gd" id="41_qqlsx"]
+[ext_resource type="PackedScene" uid="uid://ieiwovyggaos" path="res://Levels/level_1_other.tscn" id="42_uxw0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30bwu"]
 size = Vector2(31, 18)
@@ -404,11 +405,9 @@ script = ExtResource("41_qqlsx")
 position = Vector2(-34, -286.5)
 shape = SubResource("RectangleShape2D_gdku5")
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
+[node name="Level 1 Other" parent="." instance=ExtResource("42_uxw0d")]
 
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
