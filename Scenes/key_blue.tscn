@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bo064yl3ihie5"]
+
+[ext_resource type="Script" path="res://Scripts/key_yellow.gd" id="1_8rois"]
+[ext_resource type="Texture2D" uid="uid://b74fvoc14mvo0" path="res://Assets/Updated/Items/keyBlue.png" id="2_qsdn8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58i4j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qsdn8")
+}],
+"loop": true,
+"name": &"Key",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx3q8"]
+size = Vector2(50, 20)
+
+[node name="Key Blue" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_8rois")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -35)
+sprite_frames = SubResource("SpriteFrames_58i4j")
+animation = &"Key"
+flip_h = true
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -36)
+shape = SubResource("RectangleShape2D_wx3q8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

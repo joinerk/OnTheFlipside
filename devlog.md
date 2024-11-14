@@ -3,6 +3,18 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+11-14-2024 - 2hr: Redesign
+- Remade level layout
+- Removed all unnecessary assets from level (crates, etc)
+- Moved level back to Game scene
+- Made Blue Key
+https://youtu.be/LOhfqjmasi0?si=OEq0oU2bwBgqIjZw
+- TODO:
+  - Reverse Player 2 gravity
+  - Adjust jump height to level
+  - Edit key hitbox so it does not disappear immediately
+  - Reverse controls
+
 11-12-2024 - 4hr: Switch
 - Removed Autosave (can be re-added later if necessary)
 - Currently, both Normal + Other appear overlapped, + TAB does not toggle anything

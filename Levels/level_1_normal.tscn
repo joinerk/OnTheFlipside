@@ -1,15 +1,15 @@
-[gd_scene load_steps=80 format=4 uid="uid://dmsmebg8rrtj0"]
+[gd_scene load_steps=79 format=4 uid="uid://dmsmebg8rrtj0"]
 
 [ext_resource type="Script" path="res://Levels/level_1_normal.gd" id="1_4tps3"]
-[ext_resource type="PackedScene" uid="uid://ohredg4ggc6w" path="res://Scenes/Crate.tscn" id="1_yxph3"]
 [ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="2_4rc46"]
 [ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="2_tjpy5"]
 [ext_resource type="PackedScene" uid="uid://ibn77q78b2h7" path="res://Scenes/killzone.tscn" id="3_f6y6q"]
 [ext_resource type="Texture2D" uid="uid://b8jqy55ge48vo" path="res://Assets/Updated/Tiles/boxAlt.png" id="3_khipm"]
 [ext_resource type="Texture2D" uid="uid://c1a8dx16le863" path="res://Assets/Updated/Tiles/door_closedMid.png" id="4_cw06a"]
-[ext_resource type="PackedScene" uid="uid://b7ll1qal8ceax" path="res://Scenes/Button Red.tscn" id="4_n2rn6"]
 [ext_resource type="Texture2D" uid="uid://5q3q3lekfvh8" path="res://Assets/Updated/Tiles/door_closedTop.png" id="5_as2g5"]
 [ext_resource type="Texture2D" uid="uid://bh2b5ns0fukr7" path="res://Assets/Updated/Tiles/door_openMid.png" id="6_nndgp"]
+[ext_resource type="Texture2D" uid="uid://dvey2e5dst8f7" path="res://Assets/Updated/Tiles/brickWall.png" id="6_qpffv"]
+[ext_resource type="Texture2D" uid="uid://swic5jqhpecw" path="res://Assets/Updated/Tiles/castleCenter.png" id="7_2ihgs"]
 [ext_resource type="Texture2D" uid="uid://cvtbsqdujwbn3" path="res://Assets/Updated/Tiles/door_openTop.png" id="7_f0uh4"]
 [ext_resource type="Texture2D" uid="uid://byn23tonvfni8" path="res://Assets/Updated/Tiles/grassCenter.png" id="8_3cyaf"]
 [ext_resource type="Texture2D" uid="uid://b668qd5lgkkk1" path="res://Assets/Updated/Tiles/grassCenter_rounded.png" id="9_uoitt"]
@@ -40,13 +40,23 @@
 [ext_resource type="Texture2D" uid="uid://dsrjbjiyli2hp" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="34_2ig5k"]
 [ext_resource type="PackedScene" uid="uid://b74hphtr6ylml" path="res://Scenes/Key Yellow.tscn" id="35_powr8"]
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="36_pli84"]
-[ext_resource type="Script" path="res://Scenes/area_2d1.gd" id="41_qqlsx"]
-[ext_resource type="PackedScene" uid="uid://ieiwovyggaos" path="res://Levels/level_1_other.tscn" id="42_uxw0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30bwu"]
 size = Vector2(31, 18)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_svpo3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_degch"]
+texture = ExtResource("6_qpffv")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(68, 68)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ggqtg"]
+texture = ExtResource("7_2ihgs")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(68, 68)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ru4s"]
 resource_name = "Box"
@@ -328,11 +338,10 @@ sources/42 = SubResource("TileSetAtlasSource_ww2kx")
 sources/43 = SubResource("TileSetAtlasSource_6w02l")
 sources/44 = SubResource("TileSetAtlasSource_unx3j")
 sources/45 = SubResource("TileSetAtlasSource_ojypg")
+sources/0 = SubResource("TileSetAtlasSource_degch")
+sources/1 = SubResource("TileSetAtlasSource_ggqtg")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdku5"]
-size = Vector2(1362, 723)
-
-[node name="Level 1 Normal" type="Node"]
+[node name="Level 1" type="Node"]
 script = ExtResource("1_4tps3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -342,6 +351,7 @@ scale = Vector2(0.538569, 28144.4)
 zoom = Vector2(0.85, 0.85)
 
 [node name="Player 1" parent="." instance=ExtResource("2_tjpy5")]
+visible = false
 position = Vector2(-507, 0)
 collision_layer = 6
 
@@ -361,53 +371,26 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_svpo3")
 
-[node name="Button Red" parent="." instance=ExtResource("4_n2rn6")]
-position = Vector2(237, -135)
-collision_layer = 6
-collision_mask = 6
-
-[node name="Label" type="Label" parent="."]
-offset_left = -665.0
-offset_top = -310.0
-offset_right = -504.0
-offset_bottom = -209.0
-scale = Vector2(1.48, 1.48)
-text = "< Left
-> Right
-SPACE/^ to Jump
-TAB to switch worlds"
-
-[node name="Crate2" parent="." groups=["Rigidbody"] instance=ExtResource("1_yxph3")]
-z_index = 1
-position = Vector2(399, -169)
-collision_layer = 6
-gravity_scale = 4.0
-lock_rotation = true
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="."]
-position = Vector2(0, 1)
-tile_map_data = PackedByteArray("AAAAAAAAGgAAAAAAAAD//wAAGQAAAAAAAAD+/wAAGQAAAAAAAAD9/wAAGQAAAAAAAAD8/wAAGQAAAAAAAAD7/wAAGQAAAAAAAAD6/wAAGQAAAAAAAAD5/wAAGQAAAAAAAAD4/wAAGQAAAAAAAAD3/wAAGQAAAAAAAAD//wEAEwAAAAAAAAD+/wEAEwAAAAAAAAD9/wEAEwAAAAAAAAD8/wEAEwAAAAAAAAD7/wEAEwAAAAAAAAD6/wEAEwAAAAAAAAD5/wEAEwAAAAAAAAD4/wEAEwAAAAAAAAD3/wEAEwAAAAAAAAD3/wIAEwAAAAAAAAD4/wIAEwAAAAAAAAD5/wIAEwAAAAAAAAD6/wIAEwAAAAAAAAD7/wIAEwAAAAAAAAD8/wIAEwAAAAAAAAD9/wIAEwAAAAAAAAD+/wIAEwAAAAAAAAD//wIAEwAAAAAAAAABAAAAKQAAAAAAAAACAAAAKQAAAAAAAAADAAAAKQAAAAAAAAAEAAAAKQAAAAAAAAAFAAAAKQAAAAAAAAAGAAAAKQAAAAAAAAAHAAAAKQAAAAAAAAAIAAAAKQAAAAAAAAABAAEAHQAAAAAAAAACAAEAHQAAAAAAAAADAAEAHQAAAAAAAAAEAAEAHQAAAAAAAAAFAAEAHQAAAAAAAAAGAAEAHQAAAAAAAAAHAAEAHQAAAAAAAAAIAAEAHQAAAAAAAAABAAIAHQAAAAAAAAACAAIAHQAAAAAAAAADAAIAHQAAAAAAAAAEAAIAHQAAAAAAAAAFAAIAHQAAAAAAAAAGAAIAHQAAAAAAAAAHAAIAHQAAAAAAAAAIAAIAHQAAAAAAAAAAAAEAEwAAAAAAAAAAAAIAEwAAAAAAAAACAP7/GAAAAAAAAAADAP7/GQAAAAAAAAAEAP7/GQAAAAAAAAAFAP7/GQAAAAAAAAAGAP7/GQAAAAAAAAAHAP7/GQAAAAAAAAD3//r/GQAAAAAAAAD4//r/GQAAAAAAAAD5//r/GgAAAAAAAAD+//z/GgAAAAAAAAD9//z/GAAAAAAAAAACAPr/GAAAAAAAAAADAPr/GgAAAAAAAAD2/wAAGQAAAAAAAAD1/wAAGQAAAAAAAAD0/wAAGQAAAAAAAAD2/wEAEwAAAAAAAAD2/wIAEwAAAAAAAAD1/wIAEwAAAAAAAAD1/wEAEwAAAAAAAAD0/wEAEwAAAAAAAAD0/wIAEwAAAAAAAAAJAAAAKQAAAAAAAAAKAAAAKQAAAAAAAAALAAAAKQAAAAAAAAAJAAEAHQAAAAAAAAAJAAIAHQAAAAAAAAAKAAIAHQAAAAAAAAAKAAEAHQAAAAAAAAALAAEAHQAAAAAAAAALAAIAHQAAAAAAAAD2//r/GAAAAAAAAAAIAP7/GgAAAAAAAAA=")
-tile_set = SubResource("TileSet_p6j5w")
-
 [node name="Key Yellow2" parent="." instance=ExtResource("35_powr8")]
 position = Vector2(204, -407)
 
-[node name="Next Level2" parent="." instance=ExtResource("36_pli84")]
+[node name="Door 1" parent="." instance=ExtResource("36_pli84")]
 position = Vector2(-544, -407)
 
-[node name="Area2D" type="Area2D" parent="."]
-visible = false
-collision_layer = 7
-collision_mask = 7
-script = ExtResource("41_qqlsx")
+[node name="Door 2" parent="." instance=ExtResource("36_pli84")]
+position = Vector2(478, -136)
+rotation = 3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-34, -286.5)
-shape = SubResource("RectangleShape2D_gdku5")
+[node name="Grass" type="TileMapLayer" parent="."]
+position = Vector2(0, 1)
+tile_map_data = PackedByteArray("AAD1/wAAGQAAAAAAAAD2/wAAGQAAAAAAAAD3/wAAGQAAAAAAAAD4/wAAGQAAAAAAAAD5/wAAGQAAAAAAAAD6/wAAGQAAAAAAAAD7/wAAGQAAAAAAAAD7/wEAEwAAAAAAAAD8/wEAEwAAAAAAAAD9/wEAEwAAAAAAAAD9/wAAGQAAAAAAAAD+/wAAGQAAAAAAAAD//wAAGQAAAAAAAAD8/wAAGQAAAAAAAAAAAAAAGQAAAAAAAAABAAAAGQAAAAAAAAACAAAAGQAAAAAAAAADAAAAGQAAAAAAAAAEAAAAGQAAAAAAAAAFAAAAGQAAAAAAAAAGAAAAGQAAAAAAAAAHAAAAGQAAAAAAAAAIAAAAGQAAAAAAAAAJAAAAGQAAAAAAAAD1/wEAEwAAAAAAAAD2/wEAEwAAAAAAAAD3/wEAEwAAAAAAAAD4/wEAEwAAAAAAAAD5/wEAEwAAAAAAAAD6/wEAEwAAAAAAAAD+/wEAEwAAAAAAAAD//wEAEwAAAAAAAAAAAAEAEwAAAAAAAAABAAEAEwAAAAAAAAACAAEAEwAAAAAAAAADAAEAEwAAAAAAAAAEAAEAEwAAAAAAAAAFAAEAEwAAAAAAAAAGAAEAEwAAAAAAAAAHAAEAEwAAAAAAAAAIAAEAEwAAAAAAAAAJAAEAEwAAAAAAAAAJAP3/GQAAAAAAAAAIAP3/GQAAAAAAAAAHAP3/GQAAAAAAAAAGAP3/GQAAAAAAAAAFAP3/GQAAAAAAAAAEAP3/GQAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_p6j5w")
 
-[node name="Level 1 Other" parent="." instance=ExtResource("42_uxw0d")]
+[node name="Stone" type="TileMapLayer" parent="."]
+position = Vector2(0, 1)
+rotation = -3.14159
+tile_map_data = PackedByteArray("AAAKAAkAIAAAAAAAAAAJAAkAIAAAAAAAAAAIAAkAIAAAAAAAAAAHAAkAIAAAAAAAAAAGAAkAIAAAAAAAAAAFAAkAIAAAAAAAAAAEAAkAIAAAAAAAAAADAAkAIAAAAAAAAAACAAkAIAAAAAAAAAABAAkAIAAAAAAAAAAAAAkAIAAAAAAAAAD//wkAIAAAAAAAAAD+/wkAIAAAAAAAAAD9/wkAIAAAAAAAAAD8/wkAIAAAAAAAAAD7/wkAIAAAAAAAAAD6/wkAIAAAAAAAAAD5/wkAIAAAAAAAAAD4/wkAIAAAAAAAAAD3/wkAIAAAAAAAAAD2/wkAIAAAAAAAAAAKAAgAJQAAAAAAAAAJAAgAJQAAAAAAAAAIAAgAJQAAAAAAAAAHAAgAJQAAAAAAAAAGAAgAJQAAAAAAAAAFAAgAJQAAAAAAAAAEAAgAJQAAAAAAAAADAAgAJQAAAAAAAAACAAgAJQAAAAAAAAABAAgAJQAAAAAAAAAAAAgAJQAAAAAAAAD//wgAJQAAAAAAAAD+/wgAJQAAAAAAAAD9/wgAJQAAAAAAAAD8/wgAJQAAAAAAAAD7/wgAJQAAAAAAAAD6/wgAJQAAAAAAAAD5/wgAJQAAAAAAAAD4/wgAJQAAAAAAAAD3/wgAJQAAAAAAAAD2/wgAJQAAAAAAAAAKAAUAJQAAAAAAAAAJAAUAJQAAAAAAAAAIAAUAJQAAAAAAAAAHAAUAJQAAAAAAAAAGAAUAJQAAAAAAAAAFAAUAJQAAAAAAAAA=")
+tile_set = SubResource("TileSet_p6j5w")
 
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
