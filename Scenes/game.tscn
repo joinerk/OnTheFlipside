@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://df75iu6nnld47"]
+[gd_scene load_steps=82 format=4 uid="uid://df75iu6nnld47"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_vh3ox"]
 [ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="2_bxljp"]
@@ -345,6 +345,9 @@ sources/45 = SubResource("TileSetAtlasSource_st4oj")
 sources/0 = SubResource("TileSetAtlasSource_jug4y")
 sources/1 = SubResource("TileSetAtlasSource_a472i")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo7np"]
+size = Vector2(1380, 764)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_vh3ox")
 
@@ -363,11 +366,11 @@ collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1/Area2D"]
+visible = false
 position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_fw5ds")
 
 [node name="Player 2" parent="." instance=ExtResource("3_pltnh")]
-visible = false
 position = Vector2(479, -450)
 
 [node name="Killzone" parent="." instance=ExtResource("4_jxftr")]
@@ -402,5 +405,13 @@ rotation = -3.14159
 tile_map_data = PackedByteArray("AAAKAAkAIAAAAAAAAAAJAAkAIAAAAAAAAAAIAAkAIAAAAAAAAAAHAAkAIAAAAAAAAAAGAAkAIAAAAAAAAAAFAAkAIAAAAAAAAAAEAAkAIAAAAAAAAAADAAkAIAAAAAAAAAACAAkAIAAAAAAAAAABAAkAIAAAAAAAAAAAAAkAIAAAAAAAAAD//wkAIAAAAAAAAAD+/wkAIAAAAAAAAAD9/wkAIAAAAAAAAAD8/wkAIAAAAAAAAAD7/wkAIAAAAAAAAAD6/wkAIAAAAAAAAAD5/wkAIAAAAAAAAAD4/wkAIAAAAAAAAAD3/wkAIAAAAAAAAAD2/wkAIAAAAAAAAAAKAAgAJQAAAAAAAAAJAAgAJQAAAAAAAAAIAAgAJQAAAAAAAAAHAAgAJQAAAAAAAAAGAAgAJQAAAAAAAAAFAAgAJQAAAAAAAAAEAAgAJQAAAAAAAAADAAgAJQAAAAAAAAACAAgAJQAAAAAAAAABAAgAJQAAAAAAAAAAAAgAJQAAAAAAAAD//wgAJQAAAAAAAAD+/wgAJQAAAAAAAAD9/wgAJQAAAAAAAAD8/wgAJQAAAAAAAAD7/wgAJQAAAAAAAAD6/wgAJQAAAAAAAAD5/wgAJQAAAAAAAAD4/wgAJQAAAAAAAAD3/wgAJQAAAAAAAAD2/wgAJQAAAAAAAAAKAAUAJQAAAAAAAAAJAAUAJQAAAAAAAAAIAAUAJQAAAAAAAAAHAAUAJQAAAAAAAAAGAAUAJQAAAAAAAAAFAAUAJQAAAAAAAAA=")
 tile_set = SubResource("TileSet_il6sq")
 
+[node name="AntiGravityChecker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiGravityChecker"]
+visible = false
+position = Vector2(-44, -227)
+shape = SubResource("RectangleShape2D_lo7np")
+
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="AntiGravityChecker" to="Player 2" method="_on_AntiGravityChecker_body_entered"]

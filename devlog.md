@@ -3,6 +3,15 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
 Other docs:
 
+11-18-2024 - 2hr: Antigravity
+- Followed video to figure out how to change player input
+  and make them stick to ceiling
+https://youtu.be/-R0aND11jfs?si=Oeg4qAqIWAQwLFtY
+- TODO:
+  - Have Player 2 move while on ceiling
+  - Adjust jump height
+  - Edit key hitboxes to respond to Groups
+
 11-14-2024 - 2hr: Redesign
 - Remade level layout
 - Removed all unnecessary assets from level (crates, etc)
