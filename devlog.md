@@ -1,7 +1,18 @@
 Leigh Joiner
 Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
-Proposal: https://docs.google.com/document/d/1FoR6BEgVoXWaYY-aaHKhFO-tYtmpm_Q7JJYDLj1kTRY/edit?usp=sharing
+Proposal: https://docs.google.com/document/d/1BEe0IQIAmA6li1J1dRp2cykrAiH4w9nEAf4lVnFd6Ds/edit?usp=sharing
 Other docs:
+
+11-19-2024 - 3hr: movement
+- Continued following video to try getting player 2 to move with no success
+- Updated Proposal
+- Updated itch.io
+https://youtu.be/-R0aND11jfs?si=Oeg4qAqIWAQwLFtY
+- TODO:
+  - Get player 2 to move
+  - Get door to open when keys are collected
+  - Make level bigger to account for jump height?
+  - Poster
 
 11-18-2024 - 2hr: Antigravity
 - Followed video to figure out how to change player input

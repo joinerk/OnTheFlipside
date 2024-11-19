@@ -371,7 +371,7 @@ position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_fw5ds")
 
 [node name="Player 2" parent="." instance=ExtResource("3_pltnh")]
-position = Vector2(479, -450)
+position = Vector2(479, -448)
 
 [node name="Killzone" parent="." instance=ExtResource("4_jxftr")]
 position = Vector2(-2, 184)
@@ -410,6 +410,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AntiGravityChecker"]
+visible = false
 position = Vector2(-44, -227)
 shape = SubResource("RectangleShape2D_lo7np")
 
