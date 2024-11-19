@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bo064yl3ihie5"]
 
-[ext_resource type="Script" path="res://Scripts/key_yellow.gd" id="1_8rois"]
+[ext_resource type="Script" path="res://Scenes/key_blue.gd" id="1_a8unv"]
 [ext_resource type="Texture2D" uid="uid://b74fvoc14mvo0" path="res://Assets/Updated/Items/keyBlue.png" id="2_qsdn8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_58i4j"]
@@ -19,7 +19,7 @@ size = Vector2(50, 20)
 
 [node name="Key Blue" type="Area2D"]
 collision_mask = 2
-script = ExtResource("1_8rois")
+script = ExtResource("1_a8unv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -35)

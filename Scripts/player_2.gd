@@ -2,54 +2,52 @@ extends CharacterBody2D
 
 
 const SPEED = 500.0
-const JUMP_VELOCITY = -550.0
+const JUMP_VELOCITY = -640.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var movement = Vector2();
 var up = Vector2(0, -1);
-var gravity = 980;
+var gravity = 980.0;
 var groundspeed = 500.0;
-var jumpforce = -550.0;
+var jumpforce = -640.0;
 var AntiGravityEnabled = false;
 
 func _process(_delta):
-	movement.y += gravity;
+	movement.y += gravity
 	if movement.y > 600:
-		movement.y = 600;
+		movement.y = 600
 	if Input.is_action_pressed("right"):
-		movement.x = groundspeed;
-		animated_sprite.flip_h = true;
+		movement.x = groundspeed
+		animated_sprite.flip_h = true
 		if is_on_floor() || is_on_ceiling():
-			animated_sprite.play("Walk");
+			animated_sprite.play("Walk")
 			
 	elif Input.is_action_pressed("left"):
-		movement.x = -groundspeed;
+		movement.x = -groundspeed
 		animated_sprite.flip_h = false;
 		if is_on_floor() || is_on_ceiling():
-			animated_sprite.play("Walk");
+			animated_sprite.play("Walk")
 	
 	if is_on_floor() && Input.is_action_just_pressed("jump"):
-		movement.y = jumpforce;
+		movement.y = jumpforce
+		animated_sprite.play("Jump")
 	elif is_on_ceiling() && Input.is_action_just_pressed("jump"):
-		movement.y = -jumpforce;
-		animated_sprite.play("Jump");
+		movement.y = -jumpforce
+		animated_sprite.play("Jump")
 		
-		
-	movement = move_and_slide();
+
 		
 	if AntiGravityEnabled == false:
-		movement.y += gravity;
+		movement.y += gravity
 		if movement.y > 600:
-			movement.y = 600;
+			movement.y = 600
 	elif AntiGravityEnabled == true:
-		movement.y -= gravity;
+		movement.y -= gravity
 		if movement.y < -600:
-			movement.y = -600;
+			movement.y = -600
 
 
 
-func _on_AntiGravityChecker_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player2"):
-		print("hi!")
-		AntiGravityEnabled = true;
+func _on_anti_gravity_checker_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

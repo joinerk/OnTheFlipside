@@ -406,12 +406,13 @@ tile_map_data = PackedByteArray("AAAKAAkAIAAAAAAAAAAJAAkAIAAAAAAAAAAIAAkAIAAAAAA
 tile_set = SubResource("TileSet_il6sq")
 
 [node name="AntiGravityChecker" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AntiGravityChecker"]
-visible = false
 position = Vector2(-44, -227)
 shape = SubResource("RectangleShape2D_lo7np")
 
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="AntiGravityChecker" to="Player 2" method="_on_AntiGravityChecker_body_entered"]
+[connection signal="body_entered" from="AntiGravityChecker" to="." method="_on_anti_gravity_checker_body_entered"]

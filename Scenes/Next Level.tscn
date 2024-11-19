@@ -24,6 +24,7 @@ sources/1 = SubResource("TileSetAtlasSource_5xp1n")
 size = Vector2(68, 88)
 
 [node name="Next Level" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_w6djw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
