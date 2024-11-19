@@ -13,26 +13,30 @@ var groundspeed = 500.0;
 var jumpforce = -550.0;
 var AntiGravityEnabled = false;
 
-func _process(delta):
+func _process(_delta):
 	movement.y += gravity;
 	if movement.y > 600:
 		movement.y = 600;
 	if Input.is_action_pressed("right"):
 		movement.x = groundspeed;
 		animated_sprite.flip_h = true;
-		if is_on_floor():
+		if is_on_floor() || is_on_ceiling():
 			animated_sprite.play("Walk");
 			
 	elif Input.is_action_pressed("left"):
 		movement.x = -groundspeed;
 		animated_sprite.flip_h = false;
-		if is_on_floor():
+		if is_on_floor() || is_on_ceiling():
 			animated_sprite.play("Walk");
 	
 	if is_on_floor() && Input.is_action_just_pressed("jump"):
 		movement.y = jumpforce;
-	elif !is_on_floor():
+	elif is_on_ceiling() && Input.is_action_just_pressed("jump"):
+		movement.y = -jumpforce;
 		animated_sprite.play("Jump");
+		
+		
+	movement = move_and_slide();
 		
 	if AntiGravityEnabled == false:
 		movement.y += gravity;
