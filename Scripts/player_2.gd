@@ -6,12 +6,12 @@ const JUMP_VELOCITY = -640.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var movement = Vector2();
-var up = Vector2(0, -1);
-var gravity = 980.0;
-var groundspeed = 500.0;
-var jumpforce = -640.0;
-var AntiGravityEnabled = false;
+var movement = Vector2()
+var up = Vector2(0, -1)
+var gravity = 980.0
+var groundspeed = 500.0
+var jumpforce = -640.0
+var AntiGravityEnabled = false
 
 func _process(_delta):
 	movement.y += gravity
@@ -46,8 +46,4 @@ func _process(_delta):
 		movement.y -= gravity
 		if movement.y < -600:
 			movement.y = -600
-
-
-
-func _on_anti_gravity_checker_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+ 
