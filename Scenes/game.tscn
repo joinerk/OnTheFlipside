@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=4 uid="uid://df75iu6nnld47"]
+[gd_scene load_steps=91 format=4 uid="uid://df75iu6nnld47"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_vh3ox"]
 [ext_resource type="PackedScene" uid="uid://d07u0ewajkj22" path="res://Scenes/Player 1.tscn" id="2_bxljp"]
@@ -9,13 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://bd5ugdew4myl6" path="res://Scenes/Next Level.tscn" id="7_11xmc"]
 [ext_resource type="Texture2D" uid="uid://dvey2e5dst8f7" path="res://Assets/Updated/Tiles/brickWall.png" id="8_mnv3s"]
 [ext_resource type="Texture2D" uid="uid://swic5jqhpecw" path="res://Assets/Updated/Tiles/castleCenter.png" id="9_me57s"]
+[ext_resource type="Texture2D" uid="uid://n7yhrldw2omw" path="res://Assets/craftpix-net-558275-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 2/1.png" id="10_dlpvp"]
 [ext_resource type="Texture2D" uid="uid://bxac72844yh5r" path="res://Assets/Updated/Tiles/box.png" id="10_tdkrb"]
+[ext_resource type="Texture2D" uid="uid://bhe3qpu4cecfc" path="res://Assets/craftpix-net-558275-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 1/1.png" id="11_328ed"]
 [ext_resource type="Texture2D" uid="uid://b8jqy55ge48vo" path="res://Assets/Updated/Tiles/boxAlt.png" id="11_h8drc"]
 [ext_resource type="Texture2D" uid="uid://c1a8dx16le863" path="res://Assets/Updated/Tiles/door_closedMid.png" id="12_1nus2"]
+[ext_resource type="Texture2D" uid="uid://cbejpc0ysxilk" path="res://Assets/craftpix-net-558275-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 4/1.png" id="12_dm0sr"]
 [ext_resource type="Texture2D" uid="uid://5q3q3lekfvh8" path="res://Assets/Updated/Tiles/door_closedTop.png" id="13_b68rr"]
 [ext_resource type="Texture2D" uid="uid://bh2b5ns0fukr7" path="res://Assets/Updated/Tiles/door_openMid.png" id="14_qdef0"]
 [ext_resource type="Texture2D" uid="uid://cvtbsqdujwbn3" path="res://Assets/Updated/Tiles/door_openTop.png" id="15_b4huc"]
 [ext_resource type="Texture2D" uid="uid://byn23tonvfni8" path="res://Assets/Updated/Tiles/grassCenter.png" id="16_p2ffh"]
+[ext_resource type="Texture2D" uid="uid://c68fgga0v1ohq" path="res://Assets/Updated/bg.png" id="17_disfl"]
 [ext_resource type="Texture2D" uid="uid://b668qd5lgkkk1" path="res://Assets/Updated/Tiles/grassCenter_rounded.png" id="17_y2j4u"]
 [ext_resource type="Texture2D" uid="uid://bqov0ow1wvx0d" path="res://Assets/Updated/Tiles/grassHalfLeft.png" id="18_pletb"]
 [ext_resource type="Texture2D" uid="uid://bn3vaol50dtr" path="res://Assets/Updated/Tiles/grassHalfMid.png" id="19_tq7te"]
@@ -42,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://ch1rjeq00d5ls" path="res://Assets/Updated/Items/buttonGreen_pressed.png" id="40_rk0mx"]
 [ext_resource type="Texture2D" uid="uid://c5sygemk3cki5" path="res://Assets/Updated/Items/buttonRed.png" id="41_swsmm"]
 [ext_resource type="Texture2D" uid="uid://dsrjbjiyli2hp" path="res://Assets/Updated/Items/buttonRed_pressed.png" id="42_jnwar"]
+[ext_resource type="Texture2D" uid="uid://c5jwu3vn7bk0w" path="res://Assets/craftpix-net-558275-free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 7/1.png" id="50_mlw8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fw5ds"]
 size = Vector2(31, 18)
@@ -61,6 +66,114 @@ margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jfe7q"]
+texture = ExtResource("10_dlpvp")
+texture_region_size = Vector2i(72, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilv17"]
+texture = ExtResource("11_328ed")
+texture_region_size = Vector2i(72, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dr372"]
+texture = ExtResource("12_dm0sr")
+texture_region_size = Vector2i(71, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egl8t"]
 resource_name = "Box"
@@ -112,6 +225,20 @@ margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vscsi"]
+texture = ExtResource("17_disfl")
+margins = Vector2i(1, 1)
+texture_region_size = Vector2i(84, 84)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ag5h"]
 resource_name = "Grass C R"
@@ -306,6 +433,42 @@ margins = Vector2i(1, 1)
 texture_region_size = Vector2i(68, 68)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rivev"]
+texture = ExtResource("50_mlw8g")
+texture_region_size = Vector2i(72, 80)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_il6sq"]
 tile_size = Vector2i(68, 68)
 physics_layer_0/collision_layer = 1
@@ -344,22 +507,25 @@ sources/44 = SubResource("TileSetAtlasSource_g60xt")
 sources/45 = SubResource("TileSetAtlasSource_st4oj")
 sources/0 = SubResource("TileSetAtlasSource_jug4y")
 sources/1 = SubResource("TileSetAtlasSource_a472i")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo7np"]
-size = Vector2(1380, 764)
+sources/2 = SubResource("TileSetAtlasSource_vscsi")
+sources/9 = SubResource("TileSetAtlasSource_rivev")
+sources/10 = SubResource("TileSetAtlasSource_jfe7q")
+sources/11 = SubResource("TileSetAtlasSource_ilv17")
+sources/12 = SubResource("TileSetAtlasSource_dr372")
 
 [node name="Game" type="Node2D"]
+position = Vector2(37, 241)
 script = ExtResource("1_vh3ox")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-34, -267)
+position = Vector2(-34, -287)
 rotation = -3.14159
 scale = Vector2(0.538569, 28144.4)
 zoom = Vector2(0.85, 0.85)
 
 [node name="Player 1" parent="." instance=ExtResource("2_bxljp")]
 position = Vector2(-544, 0)
-collision_layer = 6
+collision_layer = 262
 
 [node name="Area2D" type="Area2D" parent="Player 1"]
 collision_layer = 4
@@ -370,8 +536,11 @@ visible = false
 position = Vector2(-0.5, -7)
 shape = SubResource("RectangleShape2D_fw5ds")
 
-[node name="Player 2" parent="." instance=ExtResource("3_pltnh")]
-position = Vector2(479, -448)
+[node name="Player 2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_pltnh")]
+z_index = 5
+position = Vector2(470, -481)
+collision_layer = 514
+player = NodePath("../Player 1")
 
 [node name="Killzone" parent="." instance=ExtResource("4_jxftr")]
 position = Vector2(-2, 184)
@@ -382,13 +551,15 @@ collision_mask = 4
 shape = SubResource("WorldBoundaryShape2D_f577c")
 
 [node name="Key Yellow" parent="." instance=ExtResource("5_sckny")]
-position = Vector2(479, -204)
+position = Vector2(479, -224)
+collision_mask = 256
 
 [node name="Key Blue" parent="." instance=ExtResource("6_x6y5v")]
-position = Vector2(-543, -260)
+position = Vector2(-543, -281)
+collision_mask = 512
 
 [node name="Door 1" parent="." instance=ExtResource("7_11xmc")]
-position = Vector2(-544, -407)
+position = Vector2(-544, -440)
 
 [node name="Door 2" parent="." instance=ExtResource("7_11xmc")]
 position = Vector2(478, -136)
@@ -396,24 +567,27 @@ rotation = 3.14159
 
 [node name="Grass" type="TileMapLayer" parent="."]
 position = Vector2(0, 1)
-tile_map_data = PackedByteArray("AAD1/wAAGQAAAAAAAAD2/wAAGQAAAAAAAAD3/wAAGQAAAAAAAAD4/wAAGQAAAAAAAAD5/wAAGQAAAAAAAAD6/wAAGQAAAAAAAAD7/wAAGQAAAAAAAAD7/wEAEwAAAAAAAAD8/wEAEwAAAAAAAAD9/wEAEwAAAAAAAAD9/wAAGQAAAAAAAAD+/wAAGQAAAAAAAAD//wAAGQAAAAAAAAD8/wAAGQAAAAAAAAAAAAAAGQAAAAAAAAABAAAAGQAAAAAAAAACAAAAGQAAAAAAAAADAAAAGQAAAAAAAAAEAAAAGQAAAAAAAAAFAAAAGQAAAAAAAAAGAAAAGQAAAAAAAAAHAAAAGQAAAAAAAAAIAAAAGQAAAAAAAAAJAAAAGQAAAAAAAAD1/wEAEwAAAAAAAAD2/wEAEwAAAAAAAAD3/wEAEwAAAAAAAAD4/wEAEwAAAAAAAAD5/wEAEwAAAAAAAAD6/wEAEwAAAAAAAAD+/wEAEwAAAAAAAAD//wEAEwAAAAAAAAAAAAEAEwAAAAAAAAABAAEAEwAAAAAAAAACAAEAEwAAAAAAAAADAAEAEwAAAAAAAAAEAAEAEwAAAAAAAAAFAAEAEwAAAAAAAAAGAAEAEwAAAAAAAAAHAAEAEwAAAAAAAAAIAAEAEwAAAAAAAAAJAAEAEwAAAAAAAAAJAP3/GQAAAAAAAAAIAP3/GQAAAAAAAAAHAP3/GQAAAAAAAAAGAP3/GQAAAAAAAAAFAP3/GQAAAAAAAAAEAP3/GQAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD1/wAAGQAAAAAAAAD2/wAAGQAAAAAAAAD3/wAAGQAAAAAAAAD4/wAAGQAAAAAAAAD5/wAAGQAAAAAAAAD6/wAAGQAAAAAAAAD7/wAAGQAAAAAAAAD7/wEAEwAAAAAAAAD8/wEAEwAAAAAAAAD9/wEAEwAAAAAAAAD9/wAAGQAAAAAAAAD+/wAAGQAAAAAAAAD//wAAGQAAAAAAAAD8/wAAGQAAAAAAAAAAAAAAGQAAAAAAAAABAAAAGQAAAAAAAAACAAAAGQAAAAAAAAADAAAAGQAAAAAAAAAEAAAAGQAAAAAAAAAFAAAAGQAAAAAAAAAGAAAAGQAAAAAAAAAHAAAAGQAAAAAAAAAIAAAAGQAAAAAAAAAJAAAAGQAAAAAAAAD1/wEAEwAAAAAAAAD2/wEAEwAAAAAAAAD3/wEAEwAAAAAAAAD4/wEAEwAAAAAAAAD5/wEAEwAAAAAAAAD6/wEAEwAAAAAAAAD+/wEAEwAAAAAAAAD//wEAEwAAAAAAAAAAAAEAEwAAAAAAAAABAAEAEwAAAAAAAAACAAEAEwAAAAAAAAADAAEAEwAAAAAAAAAEAAEAEwAAAAAAAAAFAAEAEwAAAAAAAAAGAAEAEwAAAAAAAAAHAAEAEwAAAAAAAAAIAAEAEwAAAAAAAAAJAAEAEwAAAAAAAAAJAP3/GQAAAAAAAAAIAP3/GQAAAAAAAAAHAP3/GQAAAAAAAAAGAP3/GQAAAAAAAAAFAP3/GQAAAAAAAAAEAP3/GQAAAAAAAAA=")
+tile_set = SubResource("TileSet_il6sq")
+
+[node name="MidPlat" type="TileMapLayer" parent="."]
+position = Vector2(0, -50)
+tile_map_data = PackedByteArray("AAD+//z/AAAAAAAAAAAAAPz/AAAAAAAAAAD///z/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_il6sq")
 
 [node name="Stone" type="TileMapLayer" parent="."]
-position = Vector2(0, 1)
+position = Vector2(1, 34)
 rotation = -3.14159
-tile_map_data = PackedByteArray("AAAKAAkAIAAAAAAAAAAJAAkAIAAAAAAAAAAIAAkAIAAAAAAAAAAHAAkAIAAAAAAAAAAGAAkAIAAAAAAAAAAFAAkAIAAAAAAAAAAEAAkAIAAAAAAAAAADAAkAIAAAAAAAAAACAAkAIAAAAAAAAAABAAkAIAAAAAAAAAAAAAkAIAAAAAAAAAD//wkAIAAAAAAAAAD+/wkAIAAAAAAAAAD9/wkAIAAAAAAAAAD8/wkAIAAAAAAAAAD7/wkAIAAAAAAAAAD6/wkAIAAAAAAAAAD5/wkAIAAAAAAAAAD4/wkAIAAAAAAAAAD3/wkAIAAAAAAAAAD2/wkAIAAAAAAAAAAKAAgAJQAAAAAAAAAJAAgAJQAAAAAAAAAIAAgAJQAAAAAAAAAHAAgAJQAAAAAAAAAGAAgAJQAAAAAAAAAFAAgAJQAAAAAAAAAEAAgAJQAAAAAAAAADAAgAJQAAAAAAAAACAAgAJQAAAAAAAAABAAgAJQAAAAAAAAAAAAgAJQAAAAAAAAD//wgAJQAAAAAAAAD+/wgAJQAAAAAAAAD9/wgAJQAAAAAAAAD8/wgAJQAAAAAAAAD7/wgAJQAAAAAAAAD6/wgAJQAAAAAAAAD5/wgAJQAAAAAAAAD4/wgAJQAAAAAAAAD3/wgAJQAAAAAAAAD2/wgAJQAAAAAAAAAKAAUAJQAAAAAAAAAJAAUAJQAAAAAAAAAIAAUAJQAAAAAAAAAHAAUAJQAAAAAAAAAGAAUAJQAAAAAAAAAFAAUAJQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAKAAkAJQAAAAAAAAAJAAkAJQAAAAAAAAAIAAkAJQAAAAAAAAAHAAkAJQAAAAAAAAAGAAkAJQAAAAAAAAAFAAkAJQAAAAAAAAAEAAkAJQAAAAAAAAADAAkAJQAAAAAAAAACAAkAJQAAAAAAAAABAAkAJQAAAAAAAAAAAAkAJQAAAAAAAAD//wkAJQAAAAAAAAD+/wkAJQAAAAAAAAD9/wkAJQAAAAAAAAD8/wkAJQAAAAAAAAD7/wkAJQAAAAAAAAD6/wkAJQAAAAAAAAD5/wkAJQAAAAAAAAD4/wkAJQAAAAAAAAD3/wkAJQAAAAAAAAD2/wkAJQAAAAAAAAAFAAYAJQAAAAAAAAAGAAYAJQAAAAAAAAAHAAYAJQAAAAAAAAAIAAYAJQAAAAAAAAAJAAYAJQAAAAAAAAAKAAYAJQAAAAAAAAAKAAoAIAAAAAAAAAAJAAoAIAAAAAAAAAAIAAoAIAAAAAAAAAAHAAoAIAAAAAAAAAAGAAoAIAAAAAAAAAAFAAoAIAAAAAAAAAAEAAoAIAAAAAAAAAADAAoAIAAAAAAAAAACAAoAIAAAAAAAAAABAAoAIAAAAAAAAAAAAAoAIAAAAAAAAAD//woAIAAAAAAAAAD+/woAIAAAAAAAAAD9/woAIAAAAAAAAAD8/woAIAAAAAAAAAD7/woAIAAAAAAAAAD6/woAIAAAAAAAAAD5/woAIAAAAAAAAAD4/woAIAAAAAAAAAD3/woAIAAAAAAAAAD2/woAIAAAAAAAAAA=")
 tile_set = SubResource("TileSet_il6sq")
 
-[node name="AntiGravityChecker" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AntiGravityChecker"]
+[node name="BG" type="TileMapLayer" parent="."]
 visible = false
-position = Vector2(-44, -227)
-shape = SubResource("RectangleShape2D_lo7np")
+z_index = -1
+position = Vector2(151, 444)
+scale = Vector2(2.7604, 2.7604)
+tile_map_data = PackedByteArray("AAD7//r/DAAAAAAAAAD7//v/DAAAAAEAAAD7//z/DAAAAAIAAAD7//3/DAAAAAMAAAD8//r/DAABAAAAAAD8//v/DAABAAEAAAD8//z/DAABAAIAAAD8//3/DAABAAMAAAD9//r/DAACAAAAAAD9//v/DAACAAEAAAD9//z/DAACAAIAAAD9//3/DAACAAMAAAD+//r/DAADAAAAAAD+//v/DAADAAEAAAD+//z/DAADAAIAAAD+//3/DAADAAMAAAD///r/DAAEAAAAAAD///v/DAAEAAEAAAD///z/DAAEAAIAAAD///3/DAAEAAMAAAAAAPr/DAAFAAAAAAAAAPv/DAAFAAEAAAAAAPz/DAAFAAIAAAAAAP3/DAAFAAMAAAABAPr/DAAGAAAAAAABAPv/DAAGAAEAAAABAPz/DAAGAAIAAAABAP3/DAAGAAMAAAACAPr/DAAHAAAAAAACAPv/DAAHAAEAAAACAPz/DAAHAAIAAAACAP3/DAAHAAMAAAA=")
+tile_set = SubResource("TileSet_il6sq")
 
 [connection signal="body_entered" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Player 1/Area2D" to="Player 1" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="AntiGravityChecker" to="." method="_on_anti_gravity_checker_body_entered"]

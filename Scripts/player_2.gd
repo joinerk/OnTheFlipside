@@ -13,7 +13,7 @@ var groundspeed = 500.0
 var jumpforce = -640.0
 var AntiGravityEnabled = false
 
-func _process(_delta):
+func _physics_process(_delta):
 	movement.y += gravity
 	if movement.y > 600:
 		movement.y = 600
@@ -36,6 +36,7 @@ func _process(_delta):
 		movement.y = -jumpforce
 		animated_sprite.play("Jump")
 		
+		move_and_slide()
 
 		
 	if AntiGravityEnabled == false:

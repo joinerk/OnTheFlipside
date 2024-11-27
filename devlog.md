@@ -3,6 +3,14 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1BEe0IQIAmA6li1J1dRp2cykrAiH4w9nEAf4lVnFd6Ds/edit?usp=sharing
 Other docs:
 
+11-27-2024 - 3hr: Adjusted level
+- Adjusted level layout
+- Messed around with background
+- TODO:
+  - Figure out animating sprite
+  - Get door to open when keys are collected
+- 2nd Char sprites not animating
+
 11-21-2024 - 5min: Fixed commits
 - Fixed commits between github and local
 

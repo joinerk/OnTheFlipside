@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwg7s2wboui62"]
 
-[ext_resource type="Script" path="res://Scripts/player_2.gd" id="1_5vdl6"]
+[ext_resource type="Script" path="res://Scenes/player_2_alt.gd" id="1_j40ld"]
 [ext_resource type="Texture2D" uid="uid://c0jwwwlhoiyol" path="res://Assets/Diversity/Purple/Alpha/jump.png" id="2_ln72i"]
 [ext_resource type="Texture2D" uid="uid://bprg5pk2xdso6" path="res://Assets/Diversity/Purple/Alpha/stand.png" id="3_pa624"]
 [ext_resource type="Texture2D" uid="uid://dvpkypgcoltcx" path="res://Assets/Diversity/Purple/Alpha/walk_1.png" id="4_726e0"]
@@ -41,7 +41,7 @@ size = Vector2(43, 85)
 
 [node name="Player 2" type="CharacterBody2D" groups=["Player2"]]
 collision_layer = 2
-script = ExtResource("1_5vdl6")
+script = ExtResource("1_j40ld")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -47)
