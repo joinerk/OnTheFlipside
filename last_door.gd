@@ -14,4 +14,4 @@ func _on_body_entered(_body: Node2D) -> void:
 	print("collision")
 	if score >= 1:
 		door_sprite.play("Open")
-		get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
+		get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
