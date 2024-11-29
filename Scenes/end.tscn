@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://fk0q65ewoa1b"]
+
+[ext_resource type="Script" path="res://end.gd" id="1_1d7uh"]
+
+[node name="End" type="Node"]
+script = ExtResource("1_1d7uh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 277.0
+offset_right = 428.0
+offset_bottom = 300.0
+scale = Vector2(3.60232, 3.60232)
+text = "Thank you for playing!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 478.0
+offset_top = 418.0
+offset_right = 543.0
+offset_bottom = 449.0
+scale = Vector2(2.37327, 2.37327)
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

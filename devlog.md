@@ -3,6 +3,14 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1BEe0IQIAmA6li1J1dRp2cykrAiH4w9nEAf4lVnFd6Ds/edit?usp=sharing
 Other docs:
 
+11-29-2024 - 2hr: Door + End screen
+- Door now reads how many keys have been collected
+- If keys have been collected, door sends players to end screen
+- End screen has button to allow for quick replayability
+- TODO:
+  - Animated purple player sprite
+  - Build at least one more level
+
 11-27-2024 - 3hr: Adjusted level
 - Adjusted level layout
 - Messed around with background
