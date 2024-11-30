@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bakwoec2btrig"]
+
+[ext_resource type="AudioStream" uid="uid://d2fvkw6bgtkh7" path="res://Assets/Music/cool-hip-hop-loop-251857.mp3" id="1_23g5v"]
+[ext_resource type="Script" path="res://Scripts/audio_player.gd" id="1_h5wvs"]
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_23g5v")
+volume_db = 5.0
+autoplay = true
+script = ExtResource("1_h5wvs")

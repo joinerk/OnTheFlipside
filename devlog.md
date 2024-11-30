@@ -3,6 +3,14 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1BEe0IQIAmA6li1J1dRp2cykrAiH4w9nEAf4lVnFd6Ds/edit?usp=sharing
 Other docs:
 
+11-30-2024 - 2hr: Music
+- Added a background and music
+- Added controls to appear on screen
+https://youtu.be/lILnUD3xph8?si=kNGyVa8K6jmVzmnu
+https://youtu.be/cZjRBAqHvM8?si=UBhJVGLKTsark-D8
+- TODO:
+  - Add sounds for key pickup, possibly
+
 11-29-2024 - 1hr: Polish
 - Edited doors so player must go to upright door
 - Fiddled around with backgrounds, but none worked well due to multitude of colors drowning out important assets (ie keys, players)
