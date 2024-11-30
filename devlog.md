@@ -3,6 +3,13 @@ Trello Board: https://trello.com/b/7zh3TQb4/leigh-joiner-game
 Proposal: https://docs.google.com/document/d/1BEe0IQIAmA6li1J1dRp2cykrAiH4w9nEAf4lVnFd6Ds/edit?usp=sharing
 Other docs:
 
+11-29-2024 - 1hr: Polish
+- Edited doors so player must go to upright door
+- Fiddled around with backgrounds, but none worked well due to multitude of colors drowning out important assets (ie keys, players)
+- Fiddled around with music, but removed it
+- TODO:
+  - Add text with controls to first level
+
 11-29-2024 - 2hr: More levels
 - Added two more levels
 - TODO:

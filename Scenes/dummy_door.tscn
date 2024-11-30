@@ -1,15 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://stpf7bk3ocpq"]
+[gd_scene load_steps=7 format=3 uid="uid://barvq282dkv2s"]
 
-[ext_resource type="Script" path="res://Scenes/lvl_2_door.gd" id="1_gkhio"]
-[ext_resource type="Texture2D" uid="uid://c8nhtcxo14t7q" path="res://Assets/Closed 2.png" id="2_dsjao"]
-[ext_resource type="Texture2D" uid="uid://nsa0kvynayho" path="res://Assets/Closed 3.png" id="3_awt35"]
+[ext_resource type="Texture2D" uid="uid://c8nhtcxo14t7q" path="res://Assets/Closed 2.png" id="2_vf2qg"]
+[ext_resource type="Texture2D" uid="uid://nsa0kvynayho" path="res://Assets/Closed 3.png" id="3_s3cac"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8ymb"]
-atlas = ExtResource("2_dsjao")
+atlas = ExtResource("2_vf2qg")
 region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0fq6k"]
-atlas = ExtResource("3_awt35")
+atlas = ExtResource("3_s3cac")
 region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lf0ve"]
@@ -34,10 +33,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8r7n"]
 size = Vector2(70, 117)
 
-[node name="lvl 2 door" type="Area2D"]
-position = Vector2(520, -66)
+[node name="Dummy Door" type="Area2D"]
 collision_mask = 2
-script = ExtResource("1_gkhio")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, -59)
